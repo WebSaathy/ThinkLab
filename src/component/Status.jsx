@@ -1,4 +1,4 @@
-import "../component/css/Status.css";
+import "../component/css/status.css";
 import stat1 from "../assets/images/temple-removebg-preview.png"
 import stat2 from "../assets/images/stat2.png"
 function Status() {

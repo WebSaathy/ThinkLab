@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+  background: white;
+  gap: 40px;
+  overflow: hidden;
+}
+
+
+.hero-text {
+  max-width: 550px;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.hero-text span {
+  color: #4E1D7C;
+}
+
+.hero-text p {
+  font-size:17px;
+  color: #555;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+.hero-text button {
+  padding: 14px 26px;
+  background: #4D1B7A;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  transform: scale(1.03);
+}
+
+.btn2 {
+  padding: 12px 24px;
+  color: black;
+  border: 1px solid #4D1B7A;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn2:hover {
+  background: #4D1B7A;
+  color: white;
+}
+
+.arrow1 {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.arrow2 {
+  color: black;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.link a {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+ 
+}
+.link a:hover{
+  transition:ease-in;
+}
+.link img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 6%;
+    text-align: center;
+  }
+
+  .hero-img {
+    order: -1;
+    width: 100%;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-text h1{
+    font-size: 30px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .link {
+    justify-content: center;
+  }
+}

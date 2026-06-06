@@ -1,0 +1,206 @@
+.about-page {
+  padding: 10px;
+  text-align: center;
+  background:rgb(250, 249, 249);
+  display: flex;
+  gap: 40px;
+  height: 50vh;
+  margin-top: 30px;
+}
+.content-page{
+  margin-top: 20px;
+}
+
+.about-page h2 {
+  font-size: 40px;
+  margin-left: 50px;
+  line-height: 1;
+  text-align: left;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.about-page p {
+  font-size: 17px;
+  color: #555;
+  max-width: 600px;
+  align-items: center;
+  text-align: left;
+  margin-left: 50px;
+  line-height: 1.6;
+}
+.s1{
+  color:#4D1B7A;
+}
+.s2{
+  color: rgb(121, 121, 234);
+}
+.btn{
+  border-radius:20px ;
+  padding: 10px 25px;
+  margin-left: -55%;
+  margin-top: 50px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600px;
+  border: none;
+  transition: 0.3s;
+  background-color:#3F1463;
+}
+.btn:hover{
+   transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
+}
+.brainimage{
+  height: 80vh;
+  margin-top:-100px;
+  margin-left: 50px;
+
+  size: 100px;
+}
+
+
+@media (max-width: 1400px) {
+  .about-page {
+    padding: 40px 5%;
+    gap: 30px;
+    height: auto;
+  }
+
+  .brainimage {
+    width: 38vw;
+    height: auto;
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-page {
+    padding: 40px 5%;
+    gap: 25px;
+    height: auto;
+  }
+
+  .about-page h2 {
+    font-size: 32px;
+    margin-left: 0;
+  }
+
+  .about-page p {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .btn {
+    margin-left: 0;
+    margin-top: 35px;
+  }
+
+  .brainimage {
+    width: 36vw;
+    margin-top: -20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-page {
+    padding: 35px 4%;
+    gap: 20px;
+    height: auto;
+  }
+
+  .about-page h2 {
+    font-size: 28px;
+  }
+
+  .about-page p {
+    font-size: 15px;
+    max-width: 500px;
+  }
+
+  .brainimage {
+    width: 34vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 30px 4%;
+    gap: 15px;
+    height: auto;
+  }
+
+  .about-page h2 {
+    font-size: 24px;
+  }
+
+  .about-page p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    padding: 9px 20px;
+    font-size: 14px;
+    margin-top: 25px;
+  }
+
+  .brainimage {
+    width: 32vw;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page {
+    padding: 25px 3%;
+    gap: 10px;
+    height: auto;
+  }
+
+  .about-page h2 {
+    font-size: 20px;
+  }
+
+  .about-page p {
+    font-size: 12px;
+    max-width: 320px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+    margin-top: 18px;
+  }
+
+  .brainimage {
+    width: 38vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-page {
+    padding: 20px 3%;
+  }
+
+  .about-page h2 {
+    font-size: 17px;
+  }
+
+  .about-page p {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .btn {
+    padding: 7px 14px;
+    font-size: 10px;
+  }
+
+  .brainimage {
+    width: 40vw;
+  }
+}

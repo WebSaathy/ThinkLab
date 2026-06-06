@@ -1,0 +1,177 @@
+.programsec {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.programsec h1 {
+  font-size: 40px;
+}
+.programsec h1 span{
+  color: purple;
+}
+.programsec p {
+  margin-top: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: gray;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.programs-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  margin-top: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: 0.3s ease;
+  border: 1px solid rgb(232, 222, 222);
+}
+
+
+.programs-card:hover {
+  transform: translateY(-5px);
+}
+
+.cards-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+}
+
+.titles {
+  background-color: white !important;
+  color: green !important;
+  /* padding: 5px 10px; */
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.age {
+  font-size: 12px;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  color: green;
+  border-radius: 20px;
+}
+
+.programs-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-bottom {
+  display: grid;
+  justify-content: space-between;
+  /* margin-top: 10px; */
+  font-size: 13px;
+  padding: 10px;
+  color: #333;
+}
+
+.learn-btn {
+  /* width: 100%; */
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  /* background: black; */
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-btn:hover {
+  background: green;
+  color: white;
+}
+
+.Notsure {
+  background-color: rgb(237, 201, 237);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: auto;
+}
+
+.whole {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex: 1;
+  min-width: 250px;
+
+  margin-left: 0;
+}
+
+.notcontent h2 {
+  font-size: 28px;
+  color: purple;
+  margin: 0;
+}
+
+.notbtn {
+  padding: 10px 40px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.notbtn:hover {
+  transform: translateY(-2px);
+  background-color: #5b0aa0;
+}
+
+@media (max-width: 900px) {
+  .Notsure {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .whole {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .notcontent h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .notbtn {
+    width: 100%;
+  }
+
+  .notcontent h2 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.Aboutus {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4%;
+  background: white;
+  gap: 40px;
+  overflow: hidden;
+}
+
+
+.Aboutus-text {
+  max-width: 550px;
+  width: 100%;
+}
+
+.Aboutus-text h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.Aboutus-text span {
+  color: #4E1D7C;
+}
+
+.Aboutus-text p {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.Aboutus-text-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.Aboutus-text button {
+  padding: 14px 26px;
+  background: #4D1B7A;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.Aboutus-text button:hover {
+  transform: scale(1.03);
+}
+
+.btn2 {
+  padding: 12px 24px;
+  color: black;
+  border: 1px solid #4D1B7A;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+
+.Aboutus-buttons .arrow2 {
+  color:white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+.Aboutus-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.Aboutus-img img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 1200px) {
+
+  .Aboutus {
+    padding: 60px 5%;
+    gap: 30px;
+  }
+
+  .Aboutus-img img {
+    max-width: 600px;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .Aboutus {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .Aboutus-text {
+    max-width: 100%;
+  }
+
+  .Aboutus-text-buttons {
+    justify-content: center;
+  }
+
+  .Aboutus-img {
+    width: 100%;
+  }
+
+  .Aboutus-img img {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .Aboutus {
+    gap: 20px;
+    padding: 40px 5%;
+  }
+
+  .Aboutus-text h1 {
+    line-height: 1.3;
+  }
+
+  .Aboutus-text p {
+    line-height: 1.7;
+  }
+
+  .Aboutus-text-buttons {
+    gap: 15px;
+  }
+
+  .Aboutus-text button,
+  .btn2 {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .Aboutus-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .Aboutus {
+    padding: 30px 4%;
+  }
+
+  .Aboutus-text h1 {
+    font-size: 2rem;
+  }
+
+  .Aboutus-text p {
+    font-size: 15px;
+  }
+
+  .Aboutus-text-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Aboutus-text button,
+  .btn2 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Aboutus-img {
+    width: 100%;
+  }
+
+  .Aboutus-img img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 250px;
+  }
+
+}

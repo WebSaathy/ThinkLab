@@ -1,0 +1,294 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.partners-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  /* padding: 40px; */
+  background:white;
+}
+
+.partners{
+ padding-top: 50px;
+}
+.partners,
+.testimonial {
+  background:white;
+  padding: 20px;
+  /* border-radius: 18px; */
+  border: 1px solid #ececec;
+}
+
+.partners-title,
+.testimonial-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.partners-title h2,
+.testimonial-title h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111;
+}
+
+.partners-title span,
+.testimonial-title span {
+  color: #6d28d9;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.partner-card {
+  height: 95px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.partner-card img {
+  width: 70%;
+  height: 55px;
+  object-fit: contain;
+}
+.testimonial{
+  background: white;
+}
+.testimonial-card {
+  background-color: white !important;
+  color: black;
+
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: #6d28d9;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.profile h4 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.profile span {
+  font-size: 13px;
+  color: #777;
+}
+
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  background: #d1d5db;
+  border-radius: 50%;
+}
+
+.dots .active {
+  background: #6d28d9;
+}
+
+.part-btn{
+  border-radius:50px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid blue;
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+  font-size: 15px;
+   transition: 0.3s;
+
+}
+.part-btn:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
+}
+@media (max-width: 1200px) {
+
+  .partners-section {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .partners-title h2,
+  .testimonial-title h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .partners-section {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonial-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .partners-section {
+    padding: 15px;
+    gap: 25px;
+  }
+
+  .partners,
+  .testimonial {
+    padding: 18px;
+  }
+
+  .partners-title h2,
+  .testimonial-title h2 {
+    font-size: 26px;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .partner-card {
+    height: 85px;
+  }
+
+  .partner-card img {
+    width: 65%;
+    height: 45px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile h4 {
+    font-size: 15px;
+  }
+
+  .profile span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .partners-section {
+    padding: 10px;
+  }
+
+  .partners-title h2,
+  .testimonial-title h2 {
+    font-size: 22px;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-card {
+    height: 80px;
+  }
+
+  .testimonial-card {
+    padding: 18px;
+  }
+
+  .quote-icon {
+    font-size: 32px;
+  }
+
+  .testimonial-card p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .profile {
+    gap: 10px;
+  }
+
+  .profile img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .dots {
+    margin-top: 15px;
+  }
+
+  .dots span {
+    width: 8px;
+    height: 8px;
+  }
+}

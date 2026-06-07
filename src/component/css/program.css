@@ -18,7 +18,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 25px;
 }
 
@@ -27,7 +27,8 @@
   border-radius: 16px;
   overflow: hidden;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+   margin-top: 20px;
   padding-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;

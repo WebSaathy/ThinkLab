@@ -70,7 +70,7 @@ function Team() {
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({
-      left: -300,
+      left: -600,
       behavior: "smooth",
     });
   };

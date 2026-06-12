@@ -13,7 +13,10 @@ import ViewProgram from "./component/ViewProgram";
 import Register from "./component/Register";
 import Explorerevents from "./component/Explorerevents";
 import Hostanevent from "./component/Hostanevent";
+<<<<<<< HEAD
 import View from "./component/View";
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 
 
 function App() {
@@ -36,7 +39,10 @@ function App() {
        <Route path="/register" element={<Register />}/>
        <Route path="/explore_events" element={<Explorerevents />}/>
        <Route path="/Host_an_events" element={<Hostanevent />}/>
+<<<<<<< HEAD
        <Route path="/view_more" element={<View />}/>
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
       </Routes>
     </>
   );

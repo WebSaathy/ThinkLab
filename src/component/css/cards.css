@@ -2,7 +2,10 @@
     position: relative;
     width: 100%;
     /* padding: 20px; */
+<<<<<<< HEAD
      overflow-x: hidden;
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     background: white;
     margin-bottom: 20px;
 }
@@ -24,6 +27,10 @@
 .what-testimonial::-webkit-scrollbar {
     display: none;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 .what-card {
     min-width: 100%;
     background: white;
@@ -33,10 +40,18 @@
     display: flex;
     align-items: center;
     gap: 20px;
+<<<<<<< HEAD
     margin: 30px 0; /* FIXED */
     padding-left: 25%;
     box-sizing: border-box; /* ADD THIS */
 }
+=======
+    margin: 30px 30px 30px 0px;
+
+    padding-left: 25%;
+}
+
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 .quote-icon {
     font-size: 40px;
     color: #6d28d9;
@@ -55,6 +70,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+<<<<<<< HEAD
     /* margin-top: 20px; */
 }
 
@@ -65,6 +81,19 @@
 }
 /* nav buttons */
 .navs-btns {
+=======
+    margin-top: 20px;
+}
+
+.profile img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+/* nav buttons */
+.nav-btn {
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -76,6 +105,7 @@
     color: white;
     font-size: 20px;
     cursor: pointer;
+<<<<<<< HEAD
     z-index: 10;
 }
 
@@ -101,6 +131,16 @@
     .right-btn {
         right: 5px;
     }
+=======
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 .dots {

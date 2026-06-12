@@ -40,7 +40,11 @@ export default function Partners() {
 
                 <div className="what-card">
                     <button
+<<<<<<< HEAD
                         className="navs-btns left-btns"
+=======
+                        className="nav-btn left-btn"
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
                         onClick={() =>
                             setActiveIndex(
                                 activeIndex === 0
@@ -67,7 +71,11 @@ export default function Partners() {
                     </div>
 
                     <button
+<<<<<<< HEAD
                         className="navs-btns right-btns"
+=======
+                        className="nav-btn right-btn"
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
                         onClick={() =>
                             setActiveIndex(
                                 activeIndex === testimonials.length - 1

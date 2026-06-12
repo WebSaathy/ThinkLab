@@ -22,7 +22,11 @@ function ProgramCard({ title, image, desc, age, duration, level }) {
         <span className="meta">📊 {level}</span>
       </div>
 
+<<<<<<< HEAD
       <a href="/view_more"><button className="learn-btn">Learn More →</button></a>
+=======
+      <button className="learn-btn">Learn More →</button>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     </div>
   );
 }

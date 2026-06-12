@@ -1,7 +1,10 @@
 import React from "react";
 import "../component/css/viewprogram.css";
+<<<<<<< HEAD
 import Footer from "./Footer"
 
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 import {
   FaSearch,
   FaArrowRight,
@@ -13,6 +16,7 @@ import {
 import anita from "../assets/images/anita.jpeg"
 
 function ViewProgram() {
+<<<<<<< HEAD
   const topics = [
   {
     title: "Robotics",
@@ -78,6 +82,9 @@ const articles = [
   return (
     <>
    
+=======
+  return (
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     <div className="blog-page">
 
       {/* HERO SECTION */}
@@ -151,7 +158,10 @@ const articles = [
 
         <select>
           <option>All Topics</option>
+<<<<<<< HEAD
           <option>hello</option>
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
         </select>
 
         <select>
@@ -181,7 +191,11 @@ const articles = [
             <div className="featured-info">
 
               <span className="tagss">
+<<<<<<< HEAD
                Robotics  <span className="dot"> . </span>  <span className="s">  May 20,2024</span>
+=======
+                Robotics  .   <span>  May 20,2024</span>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
               </span>
 
               <h3>
@@ -206,6 +220,7 @@ const articles = [
               <div className="meta">
                 <span>5 min read</span>
                 <span>1.2k views</span>
+<<<<<<< HEAD
               
               <div className="li">
 
@@ -214,18 +229,30 @@ const articles = [
               </a>
               </div>
               </div>
+=======
+              </div>
+
+              <a href="/">
+                Read More →
+              </a>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 
             </div>
 
           </div>
 
+<<<<<<< HEAD
          
+=======
+          {/* ARTICLES */}
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 
           <div className="latest-header">
             <h2>Latest Articles</h2>
             <a href="/">View All Articles →</a>
           </div>
 
+<<<<<<< HEAD
          {articles.map((article) => (
   <div className="article-card" key={article.id}>
     <img
@@ -263,6 +290,46 @@ const articles = [
 ))}
 
         
+=======
+          {[1, 2, 3, 4].map((item) => (
+            <div className="article-card" key={item}>
+
+              <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=700"
+                alt=""
+              />
+
+              <div className="article-info">
+
+                <span className="category">
+                  STEAM Education
+                </span>
+
+                <h3>
+                  Why STEAM Education is Essential
+                  for the Future
+                </h3>
+
+                <p>
+                  Discover how STEAM learning builds
+                  critical thinking, creativity and
+                  problem-solving skills.
+                </p>
+
+                <div className="article-meta">
+                  <span>4 min read</span>
+                  <span>892 views</span>
+                </div>
+
+              </div>
+
+              <FaBookmark className="bookmark" />
+
+            </div>
+          ))}
+
+          {/* PAGINATION */}
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 
           <div className="pagination">
             <button>1</button>
@@ -278,6 +345,7 @@ const articles = [
 
         <div className="sidebar">
 
+<<<<<<< HEAD
          <div className="popular-topics">
   <h3>Popular Topics</h3>
 
@@ -295,6 +363,21 @@ const articles = [
   <a className="l" href="">View All Topics →</a>
   </div>
 </div>
+=======
+          <div className="sidebar-card">
+
+            <h3>Popular Topics</h3>
+
+            <ul>
+              <li>Robotics</li>
+              <li>AI & Future Tech</li>
+              <li>STEAM Education</li>
+              <li>Digital Skills</li>
+              <li>Innovation</li>
+            </ul>
+
+          </div>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 
           <div className="newsletter">
 
@@ -340,6 +423,7 @@ const articles = [
                 Coding for Kids: Where to Start?
               </span>
             </div>
+<<<<<<< HEAD
             <div className="popular-item">
               <img
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400"
@@ -373,6 +457,8 @@ const articles = [
                 Coding for Kids: Where to Start?
               </span>
             </div>
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 
           </div>
 
@@ -381,8 +467,11 @@ const articles = [
       </section>
 
     </div>
+<<<<<<< HEAD
   <Footer />
      </>
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   );
 }
 

@@ -18,12 +18,18 @@
 
 .impact {
   display: flex;
+<<<<<<< HEAD
   justify-content:center;
   align-items: center;
 text-align: center;
   /* max-width: 1200px; */
   /* margin: auto; */
 
+=======
+  justify-content: center;
+  align-items: center;
+text-align: center;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   background: transparent;
 }
 
@@ -74,16 +80,28 @@ text-align: center;
 
   color: white;
 }
+<<<<<<< HEAD
 @media (max-width: 992px) {
   .impact {
     max-width: 700px;
     flex-wrap: wrap;
+=======
+
+@media (max-width: 900px) {
+  .impact {
+    flex-wrap: wrap;
+    justify-content: center;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     gap: 20px;
   }
 
   .cards {
+<<<<<<< HEAD
     width: 300px;
     flex: none;
+=======
+    flex: 0 0 45%;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   }
 
   .cards::after {
@@ -91,6 +109,7 @@ text-align: center;
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
   .impact {
     max-width: 320px;
@@ -113,5 +132,29 @@ text-align: center;
   .text h2,
   .text p {
     margin-right: 0;
+=======
+
+@media (max-width: 600px) {
+  .impact {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cards {
+    justify-content: flex-start;
+    width: 100%;
+    /* margin-left: 80px; */
+    max-width: 320px;
+  }
+
+  .text h2 {
+    font-size: 1.4rem;
+  }
+
+  .cards img {
+    width: 50px;
+    height: 50px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   }
 }

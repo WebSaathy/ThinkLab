@@ -70,7 +70,11 @@ function Team() {
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({
+<<<<<<< HEAD
       left: -300,
+=======
+      left: -600,
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
       behavior: "smooth",
     });
   };

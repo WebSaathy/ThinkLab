@@ -471,6 +471,13 @@ a{
   }
 }
 
+<<<<<<< HEAD
+=======
+/* =========================
+   MOBILE
+========================= */
+
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 @media (max-width: 768px) {
   .eventspage-heading {
     font-size: 38px;
@@ -530,6 +537,7 @@ a{
   .eventspage-cta-content h2 {
     font-size: 28px;
   }
+<<<<<<< HEAD
 }
 
 
@@ -617,4 +625,6 @@ a{
   .eventspage-subscribe-btn {
     padding: 12px 15px;
   }
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }

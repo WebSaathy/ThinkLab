@@ -18,7 +18,11 @@
 
 .grid {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: repeat(5, 1fr);
+=======
+  grid-template-columns: repeat(6, 1fr);
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   gap: 25px;
 }
 
@@ -27,7 +31,12 @@
   border-radius: 16px;
   overflow: hidden;
   padding: 0;
+<<<<<<< HEAD
   margin-bottom: 20px;
+=======
+  margin-bottom: 40px;
+   margin-top: 20px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   padding-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;

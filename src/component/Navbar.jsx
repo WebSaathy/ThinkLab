@@ -26,11 +26,18 @@ export default function Navbar() {
         <NavLink to="/schools">Schools</NavLink>
         <NavLink to="/gallery">Gallery</NavLink>
         <NavLink to="/stores">Store</NavLink>
+<<<<<<< HEAD
  <NavLink to="/contactus">
         <button className="contact-btn mobile-btn">
           Contact
         </button>
         </NavLink>
+=======
+
+        <button className="contact-btn mobile-btn">
+          Contact
+        </button>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
       </nav>
 
       <div className="nav-actions">

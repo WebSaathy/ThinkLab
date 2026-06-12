@@ -1,12 +1,20 @@
 .team {
   width: 100%;
+<<<<<<< HEAD
   padding: 0px 9%;
+=======
+  padding: 0 9%;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   text-align: center;
 }
 
 .team h1 {
   font-size: 40px;
   margin-bottom: 20px;
+<<<<<<< HEAD
+=======
+  font-weight: 700;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 .team p {
@@ -14,12 +22,20 @@
   color: #555;
 }
 
+<<<<<<< HEAD
 /* WRAPPER FIX */
+=======
+/* WRAPPER */
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 .team-wrapper {
   position: relative;
   width: 100%;
   margin-top: 40px;
+<<<<<<< HEAD
   padding: 0 60px; /* ✅ space for buttons */
+=======
+  padding: 0 60px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 /* SCROLL AREA */
@@ -28,7 +44,12 @@
   gap: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
+<<<<<<< HEAD
   padding: 20px 10px;
+=======
+  padding: 20px 10px 30px;
+  scroll-snap-type: x mandatory;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 .team-container::-webkit-scrollbar {
@@ -37,6 +58,7 @@
 
 /* CARD */
 .team-card {
+<<<<<<< HEAD
   min-width:250px;
   flex-shrink: 1;
   border-radius: 15px;
@@ -44,13 +66,40 @@
   position: relative;
   padding-bottom: 20px;
   background: white;
+=======
+  flex: 0 0 calc((100% - 75px) / 4); /* 4 cards on desktop */
+  max-width: calc((100% - 75px) / 4);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-bottom: 22px;
+  background: white;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: fadeUp 0.7s ease both;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 .team-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+<<<<<<< HEAD
   border-radius: 15px 15px 0 0;
+=======
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 .team-card h3 {
@@ -74,7 +123,11 @@
   color: #555;
 }
 
+<<<<<<< HEAD
 
+=======
+/* Facebook button */
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 .facebook-btn {
   position: absolute;
   bottom: 15px;
@@ -87,12 +140,26 @@
   align-items: center;
   justify-content: center;
   font-size: 22px;
+<<<<<<< HEAD
   transition: 0.3s;
 }
 
 .facebook-btn:hover {
   transform: scale(1.1);
 }
+=======
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.facebook-btn:hover {
+  transform: scale(1.12) rotate(6deg);
+  box-shadow: 0 8px 18px rgba(24, 119, 242, 0.22);
+}
+
+/* NAV BUTTONS */
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 .navs-btn {
   position: absolute;
   top: 50%;
@@ -109,13 +176,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  transition: 0.3s ease;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }
 
 .navs-btn:hover {
   background: #333;
+<<<<<<< HEAD
 }
 
 /* SAFE POSITIONING (NO OVERLAP NOW) */
+=======
+  transform: translateY(-50%) scale(1.08);
+}
+
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 .left-btns {
   left: 10px;
 }
@@ -123,23 +200,59 @@
 .right-btns {
   right: 10px;
 }
+<<<<<<< HEAD
+=======
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 @media (max-width: 1024px) {
   .team {
     padding: 0 6%;
   }
 
   .team-card {
+<<<<<<< HEAD
     min-width: 260px;
   }
 }
 
+=======
+    flex: 0 0 calc((100% - 50px) / 3); /* 3 cards */
+    max-width: calc((100% - 50px) / 3);
+  }
+}
+
+/* SMALL TABLET / MOBILE */
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 @media (max-width: 768px) {
   .team h1 {
     font-size: 32px;
   }
 
+<<<<<<< HEAD
   .team-card {
     min-width: 240px;
+=======
+  .team-wrapper {
+    padding: 0 40px;
+  }
+
+  .team-card {
+    flex: 0 0 calc((100% - 25px) / 2); /* 2 cards */
+    max-width: calc((100% - 25px) / 2);
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   }
 
   .team-card img {
@@ -151,6 +264,7 @@
     height: 42px;
     font-size: 14px;
   }
+<<<<<<< HEAD
 
   .team-wrapper {
     padding: 0 40px;
@@ -165,5 +279,33 @@
 
   .team-wrapper {
     padding: 0 30px;
+=======
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .team-wrapper {
+    padding: 0 20px;
+  }
+
+  .team-card {
+    flex: 0 0 100%; /* 1 card */
+    max-width: 100%;
+  }
+
+  .team-card h3 {
+    font-size: 18px;
+  }
+
+  .team-card p,
+  .team-card h6 {
+    font-size: 13px;
+  }
+
+  .facebook-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   }
 }

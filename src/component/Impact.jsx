@@ -1,5 +1,6 @@
 import "../component/css/impact.css";
 import cover from "../assets/images/cover.jpeg";
+<<<<<<< HEAD
 import {
   FaCalendarAlt,
   FaUsers,
@@ -12,11 +13,15 @@ import {
   FaChevronRight,
 
 } from "react-icons/fa";
+=======
+
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 export default function Impact() {
   return (
     <section className="impacts">
 
       <h1>Our <span className="s4">Impact</span> </h1>
+<<<<<<< HEAD
       <section className="eventspage-stats">
                <div className="eventspage-stat-card">
                  <FaCalendarAlt />
@@ -51,6 +56,54 @@ export default function Impact() {
                </div>
              </section>
      
+=======
+      <div className="impact">
+
+        <div className="cards">
+          <img src={cover} alt="cover" />
+
+          <div className="text">
+            <h2>50+</h2>
+            <p>Partner Schools </p>
+          </div>
+        </div>
+
+        <div className="cards">
+          <img src={cover} alt="cover" />
+
+          <div className="text">
+            <h2>200+</h2>
+            <p>Workshops & Events</p>
+          </div>
+        </div>
+        <div className="cards">
+          <img src={cover} alt="cover" />
+
+          <div className="text">
+            <h2>25+</h2>
+            <p>Competitions Organized</p>
+          </div>
+        </div>
+
+        <div className="cards">
+          <img src={cover} alt="cover" />
+
+          <div className="text">
+            <h2>100+</h2>
+            <p>Projects Built</p>
+          </div>
+        </div>
+        <div className="cards">
+          <img src={cover} alt="cover" />
+
+          <div className="text">
+            <h2>10,000+</h2>
+            <p>Students Reached</p>
+          </div>
+        </div>
+
+      </div>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     </section>
   );
 }

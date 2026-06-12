@@ -109,7 +109,11 @@ export default function Events() {
 
         <div className="title">
           <h2>Recent <span>Posts</span> </h2>
+<<<<<<< HEAD
           <a href="/ViewProgram">View All Posts →</a>
+=======
+          <a href="/">View All Posts →</a>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
         </div>
 
         <div className="posts">

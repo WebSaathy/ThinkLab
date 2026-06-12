@@ -23,7 +23,11 @@
   height: 100px;
   background: white;
   border-radius: 50px;
+<<<<<<< HEAD
   /* padding: 10px; */
+=======
+  padding: 10px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   margin-right: 20px;
 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

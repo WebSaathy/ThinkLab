@@ -72,7 +72,11 @@ export default function Programs() {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
       <a href="/program"><button className="viewbtn">view all programs →</button></a>
+=======
+      <a href="/ViewProgram"><button className="viewbtn">view all programs →</button></a>
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
     </section>
   );
 }

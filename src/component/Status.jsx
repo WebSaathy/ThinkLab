@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import "../component/css/Status.css";
+=======
+import "../component/css/status.css";
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 import stat1 from "../assets/images/temple-removebg-preview.png"
 import stat2 from "../assets/images/stat2.png"
 function Status() {

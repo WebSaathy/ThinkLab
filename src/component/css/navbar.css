@@ -27,7 +27,11 @@
 
 .logo img {
   width: 250px;
+<<<<<<< HEAD
   height: auto;
+=======
+  height: 200px;
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
   object-fit: contain;
   cursor: pointer;
 }

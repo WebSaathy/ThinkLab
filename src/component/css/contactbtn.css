@@ -330,6 +330,7 @@ color: purple;
   font-size: 13px;
   color: gray;
 
+<<<<<<< HEAD
 }
 
 
@@ -620,4 +621,6 @@ color: purple;
   .socials {
     justify-content: center;
   }
+=======
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 }

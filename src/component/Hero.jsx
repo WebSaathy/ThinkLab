@@ -31,7 +31,11 @@ Create
 </a>
 <a href="">
 <img src={innovate}  alt="" />
+<<<<<<< HEAD
 innnovate
+=======
+innovate
+>>>>>>> a1e8361ce0f0778228bc156e4cbcc3ef3beedb3b
 </a>
 </div>
       </div>

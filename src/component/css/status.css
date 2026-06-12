@@ -1,0 +1,30 @@
+.stats{
+  width:100%;
+  padding:30px 6%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  background:#800080;
+  color:white;
+}
+
+.stat-box{
+  text-align:center;
+  display: flex;
+  gap: 10px;
+  margin-right: 0px;
+}
+
+.image1 img{
+  height: 80px;
+  width: 80px;
+}
+
+.contents1 {
+  margin-top: 20px;
+  /* margin-right: 5px; */
+
+}
+.contents1 h1{
+  font-size: 20px;
+}

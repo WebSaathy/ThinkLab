@@ -1,0 +1,13 @@
+.partners{
+  width:100%;
+  padding:80px 6%;
+  text-align:center;
+}
+
+.partner-box{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}

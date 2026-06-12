@@ -1,0 +1,117 @@
+.impacts {
+  background-color: #4D1B7A;
+  padding: 15px 4%;
+}
+
+.impacts h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.s4 {
+  color: rgb(218, 218, 80);
+  margin-left: 8px;
+}
+
+.impact {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+text-align: center;
+  /* max-width: 1200px; */
+  /* margin: auto; */
+
+  background: transparent;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+/* background-color: red; */
+  flex: 1;
+  justify-content: center;
+
+  position: relative;
+  /* padding: 10px 0; */
+}
+
+.cards:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ICON */
+.cards img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* TEXT */
+.text h2 {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: white;
+  margin-right: 40px;
+  /* background-color: #4D1B7A; */
+}
+
+.text p {
+  margin-top: 4px;
+  font-size: 13px;
+  margin-right: 10px;
+
+  color: white;
+}
+@media (max-width: 992px) {
+  .impact {
+    max-width: 700px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cards {
+    width: 300px;
+    flex: none;
+  }
+
+  .cards::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact {
+    max-width: 320px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cards {
+    width: 100%;
+    max-width: 320px;
+    flex: none;
+  }
+
+  .text,
+  .cards {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .text h2,
+  .text p {
+    margin-right: 0;
+  }
+}

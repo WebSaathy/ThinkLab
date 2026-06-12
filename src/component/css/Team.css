@@ -1,0 +1,169 @@
+.team {
+  width: 100%;
+  padding: 0px 9%;
+  text-align: center;
+}
+
+.team h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.team p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* WRAPPER FIX */
+.team-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  padding: 0 60px; /* ✅ space for buttons */
+}
+
+/* SCROLL AREA */
+.team-container {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.team-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.team-card {
+  min-width:250px;
+  flex-shrink: 1;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-bottom: 20px;
+  background: white;
+}
+
+.team-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.team-card h3 {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 22px;
+  padding: 0 20px;
+}
+
+.team-card p {
+  color: gray;
+  margin-top: 5px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.team-card h6 {
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 13px;
+  color: #555;
+}
+
+
+.facebook-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  color: #1877f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.facebook-btn:hover {
+  transform: scale(1.1);
+}
+.navs-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navs-btn:hover {
+  background: #333;
+}
+
+/* SAFE POSITIONING (NO OVERLAP NOW) */
+.left-btns {
+  left: 10px;
+}
+
+.right-btns {
+  right: 10px;
+}
+@media (max-width: 1024px) {
+  .team {
+    padding: 0 6%;
+  }
+
+  .team-card {
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team h1 {
+    font-size: 32px;
+  }
+
+  .team-card {
+    min-width: 240px;
+  }
+
+  .team-card img {
+    height: 180px;
+  }
+
+  .navs-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .team-wrapper {
+    padding: 0 40px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .team-card {
+    min-width: 220px;
+  }
+
+  .team-wrapper {
+    padding: 0 30px;
+  }
+}

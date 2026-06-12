@@ -1,0 +1,262 @@
+/* hostanevent.css */
+
+.hostanevent-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 6%;
+  background: #f8fafc;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* LEFT */
+
+.hostanevent-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hostanevent-tag {
+  width: fit-content;
+
+  background: #7c3aed;
+  color: white;
+
+  padding: 8px 18px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hostanevent-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.hostanevent-description {
+  color: #64748b;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+/* IMAGE */
+
+.hostanevent-image-wrapper {
+  width: 100%;
+  height: 380px;
+
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.hostanevent-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BENEFITS */
+
+.hostanevent-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.hostanevent-benefit-card {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hostanevent-benefit-card h3 {
+  margin-bottom: 10px;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.hostanevent-benefit-card p {
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* FORM */
+
+.hostanevent-form-wrapper {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hostanevent-form-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0f172a;
+}
+
+.hostanevent-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUTS */
+
+.hostanevent-input-group {
+  width: 100%;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 18px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+}
+
+.hostanevent-input-group:focus-within {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+
+.hostanevent-input-group svg {
+  color: #7c3aed;
+  font-size: 16px;
+}
+
+.hostanevent-input-group input,
+.hostanevent-input-group select {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  font-size: 15px;
+}
+
+/* TEXTAREA */
+
+.hostanevent-textarea {
+  width: 100%;
+  padding: 18px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+
+  resize: none;
+  outline: none;
+
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.hostanevent-textarea:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+
+/* BUTTON */
+
+.hostanevent-submit-btn {
+  width: 100%;
+  height: 58px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #7c3aed;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hostanevent-submit-btn:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .hostanevent-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hostanevent-benefits {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hostanevent-container {
+    padding: 60px 5%;
+  }
+
+  .hostanevent-title {
+    font-size: 2.2rem;
+  }
+
+  .hostanevent-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .hostanevent-form-wrapper {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hostanevent-container {
+    padding: 45px 4%;
+    gap: 40px;
+  }
+
+  .hostanevent-title {
+    font-size: 1.8rem;
+  }
+
+  .hostanevent-description {
+    font-size: 14px;
+  }
+
+  .hostanevent-image-wrapper {
+    height: 260px;
+  }
+
+  .hostanevent-form-wrapper {
+    padding: 22px;
+  }
+
+  .hostanevent-form-title {
+    font-size: 1.5rem;
+  }
+
+  .hostanevent-input-group {
+    height: 52px;
+  }
+
+  .hostanevent-submit-btn {
+    height: 52px;
+  }
+}

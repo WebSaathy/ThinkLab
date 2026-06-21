@@ -25,8 +25,8 @@
 .footer-logo img
 {
   width: 250px;
-  height: auto;
-  margin-bottom: -30px;
+  margin-bottom: 15px;
+  
   object-fit: contain;
   cursor: pointer;
 }
@@ -106,7 +106,7 @@
 .divider {
   width: 2px;
   background: rgba(255,255,255,0.2);
-  min-height: 220px;
+  min-height: 250px;
 }
 @media (max-width: 992px) {
   .footer-container {

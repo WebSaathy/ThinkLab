@@ -13,7 +13,9 @@ import ViewProgram from "./component/ViewProgram";
 import Register from "./component/Register";
 import Explorerevents from "./component/Explorerevents";
 import Hostanevent from "./component/Hostanevent";
-
+import View from "./component/View";
+import ScrollToTop from "./ScrollToTop";
+import GalleryDetail from "./component/GalleryDetail";
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
        <Route path="/schools" element={<Schools />}/>
        <Route path="/events" element={<Eventspage />}/>
        <Route path="/gallery" element={<Gallerypage />} />
+       <Route path="/gallery/:id" element={<GalleryDetail />} />
        <Route path="/stores" element={<Storespage />} />
        <Route path="/contactus" element={<Contactbtn />} />
        {/* links */}
@@ -35,6 +38,7 @@ function App() {
        <Route path="/register" element={<Register />}/>
        <Route path="/explore_events" element={<Explorerevents />}/>
        <Route path="/Host_an_events" element={<Hostanevent />}/>
+       <Route path="/view/:programId" element={<View />} />
       </Routes>
     </>
   );

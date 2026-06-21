@@ -21,6 +21,8 @@
 }
 .imagemiss img {
   height: 100px;
+  width: 100px;
+
   background: white;
   border-radius: 50px;
   padding: 10px;

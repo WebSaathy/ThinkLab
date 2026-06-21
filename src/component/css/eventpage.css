@@ -471,9 +471,6 @@ a{
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 768px) {
   .eventspage-heading {
@@ -533,5 +530,89 @@ a{
 
   .eventspage-cta-content h2 {
     font-size: 28px;
+  }
+
+}
+
+
+@media (max-width: 992px) {
+  .eventspage-subscribe {
+    width: 90%;
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+
+  .groupcontent,
+  .eventsub {
+    width: 100%;
+  }
+
+  .eventspage-subscribe h3 {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .eventspage-subscribe {
+    width: 95%;
+    padding: 25px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .eveimg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .groupcontent,
+  .eventsub {
+    width: 100%;
+  }
+
+  .eventspage-subscribe-content {
+    flex-direction: column;
+  }
+
+  .eventspage-subscribe-input,
+  .eventspage-subscribe-btn {
+    width: 100%;
+  }
+
+  .eventspage-subscribe-btn {
+    padding: 14px;
+  }
+
+  .eventspage-subscribe h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventspage-subscribe {
+    padding: 20px 15px;
+  }
+
+  .eveimg {
+    width: 65px;
+    height: 65px;
+  }
+
+  .eventspage-subscribe h3 {
+    font-size: 20px;
+  }
+
+  .eventspage-subscribe p {
+    font-size: 13px;
+  }
+
+  .eventspage-subscribe-input,
+  .eventspage-subscribe-btn {
+    padding: 12px 15px;
   }
 }

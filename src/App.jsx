@@ -16,10 +16,12 @@ import Hostanevent from "./component/Hostanevent";
 import View from "./component/View";
 import ScrollToTop from "./ScrollToTop";
 import GalleryDetail from "./component/GalleryDetail";
-
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
+
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,6 +42,7 @@ function App() {
        <Route path="/Host_an_events" element={<Hostanevent />}/>
        <Route path="/view/:programId" element={<View />} />
       </Routes>
+       
     </>
   );
 }

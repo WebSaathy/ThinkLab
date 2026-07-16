@@ -1,5 +1,6 @@
-import React from "react";
-import { useRef } from "react";
+import React, { useRef } from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import update from "../assets/images/update-removebg-preview.png"
 import "../component/css/eventpage.css";
 import {
@@ -23,7 +24,10 @@ function Eventspage() {
       behavior: "smooth",
     });
   };
-
+const { ref, inView } = useInView({
+  triggerOnce: true,
+  threshold: 0.3,
+});
   const scrollRight = () => {
     galleryRef.current?.scrollBy({
       left: 300,
@@ -136,7 +140,7 @@ function Eventspage() {
         </section>
 
         {/* Stats */}
-        <section className="eventspage-stats">
+        {/* <section className="eventspage-stats">
           <div className="eventspage-stat-card">
             <FaCalendarAlt />
             <div className="car">
@@ -168,7 +172,91 @@ function Eventspage() {
             <p>Competitions Hosted</p>
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="eventspage-stats" ref={ref}>
+
+  <div className="eventspage-stat-card">
+    <FaCalendarAlt />
+
+    <div className="car">
+      <h3>
+        {inView ? (
+          <CountUp
+            end={150}
+            duration={2.5}
+          />
+        ) : (
+          0
+        )}
+        +
+      </h3>
+
+      <p>Events Conducted</p>
+    </div>
+  </div>
+
+  <div className="eventspage-stat-card">
+    <FaUsers />
+
+    <div className="car">
+      <h3>
+        {inView ? (
+          <CountUp
+            end={10000}
+            duration={2.5}
+            separator=","
+          />
+        ) : (
+          0
+        )}
+        +
+      </h3>
+
+      <p>Participants Engaged</p>
+    </div>
+  </div>
+
+  <div className="eventspage-stat-card">
+    <FaSchool />
+
+    <div className="car">
+      <h3>
+        {inView ? (
+          <CountUp
+            end={200}
+            duration={2.5}
+          />
+        ) : (
+          0
+        )}
+        +
+      </h3>
+
+      <p>Partner Schools</p>
+    </div>
+  </div>
+
+  <div className="eventspage-stat-card">
+    <FaTrophy />
+
+    <div className="car">
+      <h3>
+        {inView ? (
+          <CountUp
+            end={25}
+            duration={2.5}
+          />
+        ) : (
+          0
+        )}
+        +
+      </h3>
+
+      <p>Competitions Hosted</p>
+    </div>
+  </div>
+
+</section>
 
 
         <section className="eventspage-upcoming">

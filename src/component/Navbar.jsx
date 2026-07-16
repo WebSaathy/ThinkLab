@@ -33,7 +33,15 @@ export default function Navbar() {
       </nav>
 
       <div className="nav-actions">
-        <input type="text" placeholder="Search 🔍" />
+        {/* <input type="text" placeholder="Search 🔍" /> */}
+        <div className="search-box">
+  <i className="fas fa-search search-icon"></i>
+
+  <input
+    type="text"
+    placeholder="Search anything..."
+  />
+</div>
 
         <NavLink to="/contactus">
           <button className="contact-btn desktop-btn">

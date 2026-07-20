@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
+.partnerDiv{
+  margin: auto;
+}
 .partners-section {
   width: 100%;
   display: grid;

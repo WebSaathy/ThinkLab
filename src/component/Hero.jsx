@@ -31,7 +31,7 @@ Create
 </a>
 <a href="">
 <img src={innovate}  alt="" />
-innovate
+Innovate
 </a>
 </div>
       </div>

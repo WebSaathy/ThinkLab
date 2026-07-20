@@ -11,8 +11,8 @@ import {
 } from "react-icons/fa";
 
 import "../component/css/footer.css";
-import logo from "../assets/images/logo.png";
 
+import logo from "../assets/images/logo3.png";
 function Footer() {
   return (
     <footer className="footer">

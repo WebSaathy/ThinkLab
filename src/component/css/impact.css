@@ -20,23 +20,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-text-align: center;
+  text-align: center;
   background: transparent;
 }
 
 .cards {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: white;
-/* background-color: red; */
-  flex: 1;
   justify-content: center;
-
+  gap: 12px;
+  flex: 1;
+  color: white;
   position: relative;
-  /* padding: 10px 0; */
+  transition: all 0.35s ease;
 }
 
+/* Divider for Desktop */
 .cards:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -52,28 +51,44 @@ text-align: center;
   width: 60px;
   height: 60px;
   object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
 /* TEXT */
+.text {
+  text-align: left;
+}
+
 .text h2 {
   margin: 0;
   font-size: 1.9rem;
   font-weight: 500;
   color: white;
   margin-right: 40px;
-  /* background-color: #4D1B7A; */
 }
-
 
 .text p {
   margin-top: 4px;
   font-size: 13px;
   margin-right: 10px;
-
   color: white;
 }
 
+/* Desktop Hover */
+.cards:hover img {
+  transform: scale(1.1) rotate(8deg);
+}
+
+.cards:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================
+   Tablet
+========================== */
+
 @media (max-width: 900px) {
+
   .impact {
     flex-wrap: wrap;
     justify-content: center;
@@ -87,29 +102,120 @@ text-align: center;
   .cards::after {
     display: none;
   }
+
 }
 
+/* ==========================
+   Mobile
+========================== */
 
 @media (max-width: 600px) {
+
+  .impacts {
+    padding: 20px 4%;
+  }
+
   .impact {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
   }
 
   .cards {
-    justify-content: flex-start;
     width: 100%;
-    /* margin-left: 80px; */
-    max-width: 320px;
+    max-width: 340px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    animation: fadeUp .6s ease;
   }
 
-  .text h2 {
-    font-size: 1.4rem;
+  .cards:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
   }
 
   .cards img {
     width: 50px;
     height: 50px;
+    flex-shrink: 0;
   }
+
+  .text {
+    text-align: left;
+  }
+
+  .text h2 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .text p {
+    margin: 4px 0 0;
+    font-size: 13px;
+  }
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width: 420px) {
+
+  .impacts {
+    padding: 18px 3%;
+  }
+
+  .cards {
+    max-width: 100%;
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .cards img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .text h2 {
+    font-size: 1.3rem;
+  }
+
+  .text p {
+    font-size: 12px;
+  }
+
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }

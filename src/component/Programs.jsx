@@ -72,7 +72,7 @@ export default function Programs() {
           </div>
         ))}
       </div>
-      <a href="/ViewProgram"><button className="viewbtn">view all programs →</button></a>
+      <a href="/ViewProgram"><button className="viewbtn">View All Programs →</button></a>
     </section>
   );
 }

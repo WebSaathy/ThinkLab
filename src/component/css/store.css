@@ -2,47 +2,53 @@
   display: flex;
   justify-content: space-between;
   padding: 60px;
-  /* gap: 40px; */
+  gap: 40px;
 }
+
+/* ================= LEFT ================= */
 
 .store-left {
   flex: 1;
   display: flex;
   text-align: left;
-  gap: 15px;
+  gap: 18px;
+  animation: slideLeft .8s ease;
 }
 
-.store-icon img{
+.store-icon img {
   width: 100%;
-  text-align: center;
-  justify-content: center;
   display: flex;
- 
+  justify-content: center;
 }
-.store-left h2{
-  margin-bottom: 10px;
-  margin-top: 20px;
-  color:#4C1B77 ;
 
- }
-.store-left p{
-  font-size: 13px;
+.store-left h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #4C1B77;
 }
+
+.store-left p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
 .store-btn {
-  margin-top: 15px;
-  padding: 10px 18px;
-  background:#4C1B77;
+  margin-top: 18px;
+  padding: 11px 22px;
+  background: #4C1B77;
   color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all .35s ease;
 }
-.store-btn:hover{
-   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 
+.store-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(76, 27, 119, .25);
 }
+
+/* ================= RIGHT ================= */
 
 .store-right {
   flex: 2;
@@ -51,21 +57,29 @@
 
 .arrows {
   position: absolute;
-  top: -40px;
-  right: 0px;
+  top: -45px;
+  right: 0;
   display: flex;
   gap: 10px;
 }
 
 .arrows button {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   border: none;
-  background: black;
-  color: white;
   border-radius: 50%;
+  background: #4C1B77;
+  color: white;
   cursor: pointer;
+  transition: all .35s ease;
 }
+
+.arrows button:hover {
+  transform: scale(1.1);
+  background: #65239b;
+}
+
+/* ================= PRODUCTS ================= */
 
 .product-row {
   display: flex;
@@ -75,137 +89,205 @@
 
 .product-card {
   width: 180px;
-  background: #f9f6f6;
   margin-left: 30px;
-  border-radius: 10px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: all .4s ease;
+  animation: fadeUp .8s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
 }
 
 .product-card img {
   width: 100%;
-  height: 140px;
+  height: 150px;
   object-fit: cover;
+  transition: transform .5s ease;
 }
-.h4{
-  padding: 0px 10px;
+
+.product-card:hover img {
+  transform: scale(1.08);
 }
+
+.h4 {
+  padding: 10px;
+}
+
 .price-row {
   display: flex;
-  padding: 10px;
-
   justify-content: space-between;
+  padding: 10px;
 }
 
-@media (max-width: 1200px) {
+/* ================= DESKTOP STAGGER ================= */
 
-  .store-section {
-    padding: 50px 30px;
-    gap: 30px;
-  }
-
-  .product-card {
-    width: 160px;
-    margin-left: 10px;
-  }
+.product-card:nth-child(1){
+    animation-delay:.1s;
 }
 
-@media (max-width: 992px) {
-
-  .store-section {
-    flex-direction: column;
-  }
-
-  .store-left {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .store-right {
-    width: 100%;
-  }
-
-  .product-row {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .product-card {
-    margin-left: 0;
-  }
-
-  .arrows {
-    top: -50px;
-    right: 10px;
-}
-}
-@media (max-width: 768px) {
-
-  .store-section {
-    padding: 40px 20px;
-  }
-
-  .store-left {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .store-icon {
-    font-size: 70px;
-  }
-
-  .store-left h2 {
-    font-size: 24px;
-  }
-
-  .product-row {
-    gap: 15px;
-  }
-
-  .product-card {
-    width: 45%;
-  }
-
-  .product-card img {
-    height: 140px;
-  }
-
-  .arrows button {
-    width: 32px;
-    height: 32px;
-  }
+.product-card:nth-child(2){
+    animation-delay:.25s;
 }
 
-@media (max-width: 480px) {
+.product-card:nth-child(3){
+    animation-delay:.4s;
+}
 
-  .store-section {
-    padding: 30px 15px;
-  }
+.product-card:nth-child(4){
+    animation-delay:.55s;
+}
 
-  .store-left p {
-    font-size: 12px;
-  }
+/* ================= 1200 ================= */
 
-  .store-btn {
-    width: 100%;
-  }
+@media (max-width:1200px){
 
-  .product-row {
-    flex-direction: column;
-    align-items: center;
-  }
+.store-section{
+    padding:50px 30px;
+}
 
-  .product-card {
-    width: 100%;
-    max-width: 280px;
-  }
+.product-card{
+    width:170px;
+    margin-left:10px;
+}
 
-  .product-card img {
-    height: 180px;
-  }
+}
 
-  .arrows {
-    position: static;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
+/* ================= 992 ================= */
+
+@media (max-width:992px){
+
+.store-section{
+    flex-direction:column;
+}
+
+.store-left{
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.store-right{
+    width:100%;
+}
+
+.product-row{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.product-card{
+    width:calc(50% - 12px);
+    margin:0;
+}
+
+.arrows{
+    top:-50px;
+    right:10px;
+}
+
+}
+
+/* ================= 768 ================= */
+
+@media (max-width:768px){
+
+.store-section{
+    padding:40px 20px;
+}
+
+.store-left{
+    flex-direction:column;
+}
+
+.product-row{
+    gap:16px;
+}
+
+.product-card{
+    width:calc(50% - 10px);
+}
+
+.product-card img{
+    height:170px;
+}
+
+}
+
+/* ================= 480 ================= */
+
+@media (max-width:480px){
+
+.store-section{
+    padding:30px 15px;
+}
+
+.store-left p{
+    font-size:12px;
+}
+
+.store-btn{
+    width:auto;
+}
+
+.product-row{
+    gap:12px;
+}
+
+.product-card{
+    width:calc(50% - 6px);
+}
+
+.product-card img{
+    height:130px;
+}
+
+.h4{
+    font-size:14px;
+}
+
+.price-row{
+    font-size:13px;
+}
+
+.arrows{
+    position:static;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes slideLeft{
+
+0%{
+opacity:0;
+transform:translateX(-50px);
+}
+
+100%{
+opacity:1;
+transform:translateX(0);
+}
+
 }

@@ -51,7 +51,10 @@ export default function Partners() {
               <img src={item.logo} alt="partner" />
             </div>
           ))}
+          <div className="partnerDiv">
+
          <a href=""> <button className="part-btn">view all partners  →</button></a>
+          </div>
         </div>
       </div>
 

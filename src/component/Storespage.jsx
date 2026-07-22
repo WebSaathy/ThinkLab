@@ -78,7 +78,7 @@
 //     {
 //       image:
 //         "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=800&auto=format&fit=crop",
-//       title: "STEM Explorer Box",
+//       title: "STEAM Explorer Box",
 //       desc: "Multi-project kits for young innovators.",
 //       price: "22,300",
 //     },

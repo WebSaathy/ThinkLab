@@ -6,7 +6,7 @@ const products = [
   { name: "Robotics Starter Kit", price: "NPR 4,500", img },
   { name: "IoT Learning Kit", price: "NPR 3,200", img },
   { name: "Microbit Kit", price: "NPR 2,800", img },
-  { name: "STEM Explorer Box", price: "NPR 2,200", img },
+  { name: "STEAM Explorer Box", price: "NPR 2,200", img },
   { name: "AI Learning Kit", price: "NPR 5,000", img },
   { name: "Electronics Kit", price: "NPR 3,800", img },
   { name: "Coding Kit", price: "NPR 4,000", img },
@@ -47,7 +47,7 @@ export default function Store() {
           </h2>
 
           <p>
-            Explore our STEM kits, robotics products, and innovation tools.
+            Explore our STEAM kits, robotics products, and innovation tools.
             
           </p>
 

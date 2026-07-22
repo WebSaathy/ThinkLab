@@ -22,7 +22,7 @@ export default function Partners() {
         {
             text: "Amazing learning experience. Students are now more confident in coding and robotics.",
             name: "Amit Yadav",
-            role: "Coordinator, STEM Academy",
+            role: "Coordinator, STEAM Academy",
             img: "https://randomuser.me/api/portraits/men/65.jpg",
         },
     ];

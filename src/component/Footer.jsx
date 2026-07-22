@@ -94,7 +94,7 @@ function Footer() {
         <div className="footer-col">
           <h4>Store</h4>
           <a href="#">All Products</a>
-          <a href="#">STEM Kits</a>
+          <a href="#">STEAM Kits</a>
           <a href="#">Robotics</a>
           <a href="#">Electronics</a>
           <a href="#">Accessories</a>

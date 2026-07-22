@@ -51,7 +51,7 @@ function Hostanevent() {
 
         <p className="hostanevent-description">
           Partner with us to host robotics competitions,
-          coding bootcamps, STEM workshops, innovation
+          coding bootcamps, STEAM workshops, innovation
           expos, and technology events for students and
           educators across Nepal.
         </p>
@@ -88,7 +88,7 @@ function Hostanevent() {
 
             <p>
               Create engaging learning experiences
-              through STEM and innovation activities.
+              through STEAM and innovation activities.
             </p>
           </div>
         </div>
@@ -210,7 +210,7 @@ function Hostanevent() {
               </option>
 
               <option value="Workshop">
-                STEM Workshop
+                STEAM Workshop
               </option>
 
               <option value="Expo">

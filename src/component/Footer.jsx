@@ -32,7 +32,7 @@ function Footer() {
 </div>
           <div className="brand-text">
             <p>
-              Empowering young minds through STEM education, innovation, and
+              Empowering young minds through STEAM education, innovation, and
               digital skills.
             </p>
 

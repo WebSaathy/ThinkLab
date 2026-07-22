@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaLinkedin,
   FaGlobe,
+  FaTiktok,
 } from "react-icons/fa";
 
 import "../component/css/footer.css";
@@ -36,20 +37,20 @@ function Footer() {
             </p>
 
             <div className="socials-icons">
-              <a href="#" className="icons-box">
+              <a href="https://www.facebook.com/nexuthinklab" className="icons-box">
                 <FaFacebookF />
               </a>
 
-              <a href="#" className="icons-box">
+              <a href="https://www.instagram.com/nexuthinklab" className="icons-box">
                 <FaInstagram />
               </a>
 
-              <a href="#" className="icons-box">
+              <a href="https://youtube.com/@nexuthinklab" className="icons-box">
                 <FaYoutube />
               </a>
 
-              <a href="#" className="icons-box">
-                <FaLinkedin />
+              <a href="https://www.tiktok.com/@nexuthinklab" className="icons-box">
+                <FaTiktok />
               </a>
             </div>
           </div>
@@ -104,22 +105,36 @@ function Footer() {
         {/* Contact */}
         <div className="footer-col">
           <h4>Contact Us</h4>
-
+          <a href="tel:+9779812345678" className="contact-item">
           <p>
             <FaPhone /> +977-9812345678
           </p>
-
+       </a>
+        <a href="mailto:info@nexuthinklab.com" className="contact-item">
           <p>
             <FaEnvelope /> info@nexuthinklab.com
           </p>
-
+        </a>
+          <a
+    href="https://www.nexuthinklab.com.np"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-item"
+  >
           <p>
-            <FaGlobe /> www.nexuthinklab.org
+            <FaGlobe /> www.nexuthinklab.com.np
           </p>
-
+</a>
+<a
+    href="https://www.google.com/maps/search/?api=1&query=Attariya,Nepal"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-item"
+  >
           <p>
-            <FaMapMarkerAlt /> Kathmandu, Nepal
+            <FaMapMarkerAlt /> Attariya, Nepal
           </p>
+          </a>
         </div>
 
       </div>

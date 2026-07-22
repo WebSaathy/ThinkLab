@@ -1,12 +1,15 @@
 import "../component/css/status.css";
-import stat1 from "../assets/images/temple-removebg-preview.png"
-import stat2 from "../assets/images/stat2.png"
+import school from "../assets/images/School .png"
+import students from "../assets/images/Students .png"
+
+import competitions from "../assets/images/Competitions .png"
+import events from "../assets/images/Events .png"
 function Status() {
   return (
     <section className="stats">
       <div className="stat-box">
         <div className="image1">
-        <img src={stat1} alt="" />
+        <img src={school} alt="" />
         </div>
         <div className="contents1">
         <h1>50+</h1>
@@ -16,7 +19,7 @@ function Status() {
 
       <div className="stat-box">
         <div className="image1">
-        <img src={stat2} alt="" />
+        <img src={students} alt="" />
         </div>
          <div className="contents1">
         <h1>10,000+</h1>
@@ -26,7 +29,7 @@ function Status() {
 
       <div className="stat-box">
          <div className="image1">
-        <img src={stat1} alt="" />
+        <img src={events} alt="" />
         </div>
          <div className="contents1">
         <h1>200+</h1>
@@ -36,22 +39,22 @@ function Status() {
 
       <div className="stat-box">
          <div className="image1">
-        <img src={stat1} alt="" />
+        <img src={competitions} alt="" />
         </div>
          <div className="contents1">
         <h1>25+</h1>
         <p>Competitions</p>
         </div>
       </div>
-        <div className="stat-box">
+        {/* <div className="stat-box">
          <div className="image1">
-        <img src={stat1} alt="" />
+        <img src={competitions} alt="" />
         </div>
          <div className="contents1">
         <h1>25+</h1>
         <p>Competitions</p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

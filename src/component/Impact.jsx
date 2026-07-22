@@ -1,6 +1,10 @@
 import "../component/css/impact.css";
 import cover from "../assets/images/cover.jpeg";
-
+import school from "../assets/images/School .png"
+import students from "../assets/images/Students .png"
+import projects from "../assets/images/Projects .png"
+import competitions from "../assets/images/Competitions .png"
+import events from "../assets/images/Events .png"
 export default function Impact() {
   return (
     <section className="impacts">
@@ -9,7 +13,7 @@ export default function Impact() {
       <div className="impact">
 
         <div className="cards">
-          <img src={cover} alt="cover" />
+          <img src={school} alt="school" />
 
           <div className="text">
             <h2>50+</h2>
@@ -18,7 +22,7 @@ export default function Impact() {
         </div>
 
         <div className="cards">
-          <img src={cover} alt="cover" />
+          <img src={events} alt="students" />
 
           <div className="text">
             <h2>200+</h2>
@@ -26,7 +30,7 @@ export default function Impact() {
           </div>
         </div>
         <div className="cards">
-          <img src={cover} alt="cover" />
+          <img src={competitions} alt="competitions" />
 
           <div className="text">
             <h2>25+</h2>
@@ -35,7 +39,7 @@ export default function Impact() {
         </div>
 
         <div className="cards">
-          <img src={cover} alt="cover" />
+          <img src={projects} alt="projects" />
 
           <div className="text">
             <h2>100+</h2>
@@ -43,7 +47,7 @@ export default function Impact() {
           </div>
         </div>
         <div className="cards">
-          <img src={cover} alt="cover" />
+          <img src={students} alt="students" />
 
           <div className="text">
             <h2>10,000+</h2>

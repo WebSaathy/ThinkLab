@@ -426,7 +426,7 @@ function Schools() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <FaSearch className="search-icon" />
+            {/* <FaSearch className="search-icon" /> */}
           </div>
 
           <div className="dropdown">

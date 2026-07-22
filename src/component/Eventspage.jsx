@@ -176,7 +176,7 @@ const { ref, inView } = useInView({
         <section className="eventspage-stats" ref={ref}>
 
   <div className="eventspage-stat-card">
-    <FaCalendarAlt />
+    <FaCalendarAlt size={60} />
 
     <div className="car">
       <h3>
@@ -196,7 +196,7 @@ const { ref, inView } = useInView({
   </div>
 
   <div className="eventspage-stat-card">
-    <FaUsers />
+    <FaUsers size={78}/>
 
     <div className="car">
       <h3>
@@ -217,7 +217,7 @@ const { ref, inView } = useInView({
   </div>
 
   <div className="eventspage-stat-card">
-    <FaSchool />
+    <FaSchool size={78} />
 
     <div className="car">
       <h3>
@@ -237,7 +237,7 @@ const { ref, inView } = useInView({
   </div>
 
   <div className="eventspage-stat-card">
-    <FaTrophy />
+    <FaTrophy size={78} />
 
     <div className="car">
       <h3>

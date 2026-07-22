@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section className="about-page">
       <div className="content-page">
-      <h2>About <span className="s1"> Nexu</span> <span className="s2">ThinkLab</span></h2>
+      <h2>About <span className="s1"> Nexu </span> <span className="s2">ThinkLab</span></h2>
       <p>
         We bridge the gap between theory and real-world application through STEAM learning.
         We bridge the gap between theory and real-world application through STEAM learning.

@@ -1,8 +1,10 @@
 .what-section {
     position: relative;
-    width: 100%;
+    width: 90%;
     /* padding: 20px; */
     background: white;
+    margin: 0 auto;
+  
     margin-bottom: 20px;
 }
 
@@ -26,6 +28,7 @@
 
 .what-card {
     min-width: 100%;
+    height: 250px;
     background: white;
     color: black;
     border-radius: 16px;

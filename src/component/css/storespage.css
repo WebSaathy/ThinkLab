@@ -236,7 +236,11 @@ body {
   color: #5b21b6;
   margin-bottom: 15px;
 }
-
+.storespage-category-icon img{
+  width: 100px!important;
+  height: 100px!important;
+  object-fit: cover!important;
+}
 .storespage-category-card p {
   font-size: 14px;
   font-weight: 600;

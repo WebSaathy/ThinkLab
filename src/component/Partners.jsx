@@ -4,12 +4,12 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 export default function Partners() {
   const partners = [
-    { logo: "https://www.greenclimate.fund/sites/default/files/styles/small/public/organisation/logo-unicef.png?itok=EFMkFeQ8" },
+    { logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJJrmpaTV7PlG-fl8bIDU-lkZqJtuslavA-NCRkfyaQ&s" },
     { logo: "https://www.rotary.org/sites/all/themes/rotary_rotaryorg/images/rotary-logo-color-2019-simplified.svg" },
     { logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN47EGRKhKK5IDBpCGYr1rvv81WsOOagVD-A&s" },
     { logo: "https://techpana.prixacdn.net/media/albums/Code-for-nepal-techpana_FzoXBov4pG.jpg" },
     { logo: "https://www.globalentrepreneurshipnetworks.org/images/logo.png" },
-    // { logo: "https://gen.global/wp-content/uploads/2022/06/GEN-Logo.png" },
+    { logo: "https://www.cse.iitb.ac.in/~suyoggatkal/staticfb/FacebookLabel.svg" },
   ];
 
   const testimonials = [
@@ -53,8 +53,8 @@ export default function Partners() {
           ))}
           <div className="partnerDiv">
 
-         <a href=""> <button className="part-btn">view all partners  →</button></a>
           </div>
+         <a href=""> <button className="part-btn">view all partners  →</button></a>
         </div>
       </div>
 

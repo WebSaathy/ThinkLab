@@ -13,7 +13,7 @@ import {
 
 import "../component/css/footer.css";
 
-import logo from "../assets/images/logo3.png";
+import logo from "../assets/images/footerlogo.jpeg";
 function Footer() {
   return (
     <footer className="footer">

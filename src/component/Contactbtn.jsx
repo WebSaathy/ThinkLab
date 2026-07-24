@@ -345,6 +345,7 @@ import {
   FaHeadset,
   FaUsers,
   FaShieldAlt,
+  FaTiktok,
 } from "react-icons/fa";
 
 import { LuPanelsTopLeft } from "react-icons/lu";
@@ -540,32 +541,56 @@ function Contactbtn() {
             <div className="info-item">
               <FaMapMarkerAlt />
               <div>
+                <a
+    href="https://www.google.com/maps/search/?api=1&query=Attariya,Nepal"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-item"
+  >
+
                 <h4>Location</h4>
-                <p>Kathmandu, Nepal</p>
+                <p>Sudurpashchim, Nepal </p>
+  </a>
               </div>
             </div>
 
             <div className="info-item">
               <FaPhoneAlt />
               <div>
+                 <a href="tel:+977 9769910660" className="contact-item">
                 <h4>Call</h4>
-                <p>+977 9812345678</p>
+
+                  
+                <p>+977 9769910660</p>
+                 </a>
               </div>
             </div>
 
             <div className="info-item">
               <FaEnvelope />
               <div>
+              <a href="mailto:nexuthinklab@gmail.com " className="contact-item">
+
+
                 <h4>Email</h4>
-                <p>info@nexuthinklab.org</p>
+                <p>nexuthinklab@gmail.com</p>
+              </a>
               </div>
             </div>
 
             <div className="info-item">
               <FaGlobe />
               <div>
+                        <a
+    href="https://www.nexuthinklab.com.np"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-item"
+  >
+
                 <h4>Website</h4>
-                <p>www.nexuthinklab.org</p>
+                <p>www.nexuthinklab.com.np</p>
+  </a>
               </div>
             </div>
 
@@ -574,10 +599,19 @@ function Contactbtn() {
               <div>
                 <h4>Social</h4>
                 <div className="socials">
-                  <FaFacebookF />
-                  <FaInstagram />
+                   <a href="https://www.facebook.com/nexuthinklab" >
+                                  <FaFacebookF />
+                                </a>
+                  <a href="https://www.tiktok.com/@nexuthinklab" >
+                  <FaTiktok />
+                  </a>
+                  <a href="https://youtube.com/@nexuthinklab" >
                   <FaYoutube />
-                  <FaLinkedinIn />
+                  </a>
+
+                 <a href="https://www.instagram.com/nexuthinklab" >
+                                <FaInstagram />
+                  </a>
                 </div>
               </div>
             </div>

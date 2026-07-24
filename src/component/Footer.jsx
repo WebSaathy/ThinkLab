@@ -105,14 +105,14 @@ function Footer() {
         {/* Contact */}
         <div className="footer-col">
           <h4>Contact Us</h4>
-          <a href="tel:+9779812345678" className="contact-item">
+          <a href="tel:+977 9769910660" className="contact-item">
           <p>
-            <FaPhone /> +977-9812345678
+            <FaPhone /> +977 9769910660
           </p>
        </a>
-        <a href="mailto:info@nexuthinklab.com" className="contact-item">
+        <a href="mailto:nexuthinklab@gmail.com " className="contact-item">
           <p>
-            <FaEnvelope /> info@nexuthinklab.com
+            <FaEnvelope /> nexuthinklab@gmail.com
           </p>
         </a>
           <a
@@ -132,7 +132,7 @@ function Footer() {
     className="contact-item"
   >
           <p>
-            <FaMapMarkerAlt /> Attariya, Nepal
+            <FaMapMarkerAlt /> Sudurpashchim, Nepal
           </p>
           </a>
         </div>

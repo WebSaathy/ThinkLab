@@ -551,32 +551,42 @@ function Eventspage() {
         {/* Stats */}
         <section className="eventspage-stats" ref={ref}>
           <div className="eventspage-stat-card">
+            <div className="school-icon">
+
             <FaCalendarAlt size={60} />
+            </div>
             <div className="car">
               <h3>
-                {inView ? <CountUp end={150} duration={2.5} /> : 0}+
+                {inView ? <CountUp start={0} end={150} duration={2.5} /> : 0}+
               </h3>
               <p>Events Conducted</p>
             </div>
           </div>
 
           <div className="eventspage-stat-card">
+            <div className="school-icon">
+
+
             <FaUsers size={78} />
+            </div>
             <div className="car">
               <h3>
                 {inView ? (
-                  <CountUp end={10000} duration={2.5} separator="," />
+                  <CountUp  start={0} end={10} duration={2.5} separator="," />
                 ) : (
                   0
                 )}
-                +
+                k+
               </h3>
               <p>Participants Engaged</p>
             </div>
           </div>
 
           <div className="eventspage-stat-card">
-            <FaSchool size={78} />
+            <div className="school-icon">
+
+            <FaSchool size={78}  />
+            </div>
             <div className="car">
               <h3>
                 {inView ? <CountUp end={200} duration={2.5} /> : 0}+
@@ -586,7 +596,10 @@ function Eventspage() {
           </div>
 
           <div className="eventspage-stat-card">
+            <div className="school-icon">
+
             <FaTrophy size={78} />
+            </div>
             <div className="car">
               <h3>
                 {inView ? <CountUp end={25} duration={2.5} /> : 0}+

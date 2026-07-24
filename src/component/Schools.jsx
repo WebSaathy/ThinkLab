@@ -419,7 +419,7 @@ function Schools() {
         </div>
 
         <div className="filters">
-          <div className="search-box">
+          <div className="search-boxs">
             <input
               type="text"
               placeholder="Search schools by name, location, province, district..."

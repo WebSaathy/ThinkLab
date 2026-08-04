@@ -63,7 +63,7 @@
 // }
 
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../assets/images/logo3.png";
@@ -76,6 +76,8 @@ export default function Navbar() {
 
   const [searchText, setSearchText] = useState("");
 
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+
   const [allItems, setAllItems] = useState([]);
 
   const [loading, setLoading] = useState(false);
@@ -84,9 +86,32 @@ export default function Navbar() {
 
   const navigate = useNavigate();
 
+  const searchBoxRef = useRef(null);
+
+  const searchInputRef = useRef(null);
+
   useEffect(() => {
     setMenuOpen(false);
+    setMobileSearchOpen(false);
   }, [location]);
+
+  useEffect(() => {
+
+    if (!mobileSearchOpen) return;
+
+    searchInputRef.current?.focus();
+
+    function handleOutsideClick(e) {
+      if (searchBoxRef.current && !searchBoxRef.current.contains(e.target)) {
+        setMobileSearchOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+
+  }, [mobileSearchOpen]);
 
   useEffect(() => {
 
@@ -217,9 +242,26 @@ export default function Navbar() {
   return (
     <header className="navbar">
 
-      <div className="logo">
+      {/* <div className="logo">
         <img src={logo} alt="" />
-      </div>
+      </div> */}
+       <div className="navbar-left">
+
+        <div
+            className={menuOpen ? "menu-toggle open" : "menu-toggle"}
+            onClick={() => setMenuOpen(!menuOpen)}
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div className="logo">
+            <img src={logo} alt="Logo" />
+        </div>
+
+    </div>
+
 
       <nav className={menuOpen ? "nav-links active" : "nav-links"}>
         <NavLink to="/">Home</NavLink>
@@ -237,19 +279,59 @@ export default function Navbar() {
 
       <div className="nav-actions">
 
-        <div className="search-box">
+        <div
+          className={mobileSearchOpen ? "search-box search-open" : "search-box"}
+          ref={searchBoxRef}
+        >
 
-          <i className="fas fa-search search-icon"></i>
+          <i
+            className="fas fa-search search-icon"
+            role="button"
+            tabIndex={0}
+            aria-label="Open search"
+            onClick={() => setMobileSearchOpen(true)}
+            onKeyDown={(e) => e.key === "Enter" && setMobileSearchOpen(true)}
+          ></i>
 
           <input
+
+            ref={searchInputRef}
 
             value={searchText}
 
             onChange={(e) => setSearchText(e.target.value)}
 
+            onFocus={() => setMobileSearchOpen(true)}
+
             placeholder="Search anything..."
 
           />
+
+          {mobileSearchOpen && (
+
+            <button
+
+              type="button"
+
+              className="search-close"
+
+              aria-label="Close search"
+
+              onClick={() => {
+
+                setSearchText("");
+
+                setMobileSearchOpen(false);
+
+              }}
+
+            >
+
+              <i className="fas fa-times"></i>
+
+            </button>
+
+          )}
 
           {searchText && (
 
@@ -281,6 +363,8 @@ export default function Navbar() {
                       navigate(item.url);
 
                       setSearchText("");
+
+                      setMobileSearchOpen(false);
 
                     }}
 
@@ -320,7 +404,7 @@ export default function Navbar() {
             Contact
           </button>
         </NavLink>
-
+{/* 
         <div
           className={menuOpen ? "menu-toggle open" : "menu-toggle"}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -328,7 +412,7 @@ export default function Navbar() {
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </div> */}
 
       </div>
 

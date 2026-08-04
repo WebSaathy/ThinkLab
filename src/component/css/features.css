@@ -2,7 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 40px;
+  padding: 50px 40px;
+  background: #faf7ff;
+  box-shadow: inset 0 12px 24px -18px rgba(78, 29, 124, .12);
 }
 
 .card-page {
@@ -11,6 +13,30 @@
   padding: 20px;
   text-align: center;
   border: 2px solid rgba(255, 165, 0, 0.4);
+  box-shadow: 0 10px 24px rgba(20, 10, 50, .06);
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: featureRise .6s ease both;
+}
+
+.card-page:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px rgba(20, 10, 50, .12);
+}
+
+.card-page:nth-child(2) { animation-delay: .08s; }
+.card-page:nth-child(3) { animation-delay: .16s; }
+.card-page:nth-child(4) { animation-delay: .24s; }
+.card-page:nth-child(5) { animation-delay: .32s; }
+
+@keyframes featureRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Center the image */
@@ -69,27 +95,27 @@
 ========================= */
 @media (max-width: 768px) {
   .features-page {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     padding: 30px 4%;
-    gap: 20px;
+    gap: 14px;
   }
 
   .card-page {
-    padding: 22px 18px;
+    padding: 16px 12px;
   }
 
   .card-page img {
-    width: 90px;
-    height: 55px;
-    margin: 0 auto 15px;
+    width: 70px;
+    height: 45px;
+    margin: 0 auto 12px;
   }
 
   .card-page h3 {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .card-page p {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -98,25 +124,26 @@
 ========================= */
 @media (max-width: 576px) {
   .features-page {
-    padding: 25px 4%;
+    padding: 20px 3%;
+    gap: 10px;
   }
 
   .card-page {
-    padding: 20px 16px;
+    padding: 14px 10px;
   }
 
   .card-page img {
-    width: 85px;
-    height: 50px;
-    margin: 0 auto 15px;
+    width: 60px;
+    height: 40px;
+    margin: 0 auto 10px;
   }
 
   .card-page h3 {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .card-page p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -125,24 +152,25 @@
 ========================= */
 @media (max-width: 420px) {
   .features-page {
-    padding: 20px 3%;
+    padding: 16px 3%;
+    gap: 8px;
   }
 
   .card-page {
-    padding: 18px 14px;
+    padding: 12px 8px;
   }
 
   .card-page img {
-    width: 80px;
-    height: 48px;
-    margin: 0 auto 15px;
+    width: 52px;
+    height: 36px;
+    margin: 0 auto 8px;
   }
 
   .card-page h3 {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .card-page p {
-    font-size: 13px;
+    font-size: 11px;
   }
 }

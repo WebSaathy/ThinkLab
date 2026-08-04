@@ -3,6 +3,8 @@
   justify-content: space-between;
   padding: 60px;
   gap: 40px;
+  background: #faf7ff;
+  box-shadow: inset 0 12px 24px -18px rgba(78, 29, 124, .10);
 }
 
 /* ================= LEFT ================= */

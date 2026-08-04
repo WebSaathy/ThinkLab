@@ -6,9 +6,6 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-.partnerDiv{
-  margin: auto;
-}
 .partners-section {
   width: 100%;
   display: grid;
@@ -16,6 +13,7 @@
   gap: 25px;
   /* padding: 40px; */
   background:white;
+  box-shadow: inset 0 12px 24px -18px rgba(78, 29, 124, .10);
 }
 
 .partners{
@@ -27,6 +25,38 @@
   padding: 20px;
   /* border-radius: 18px; */
   border: 1px solid #ececec;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(20, 10, 50, .05);
+}
+
+.partners {
+  animation: slideInLeft .6s ease both;
+}
+
+.testimonial {
+  animation: slideInRight .6s ease both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .partners-title,
@@ -51,6 +81,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+
+.part-btn-wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .partner-card {

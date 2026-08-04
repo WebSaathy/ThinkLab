@@ -171,9 +171,9 @@ export default function Partners() {
               <img src={item.logo} alt="partner" />
             </div>
           ))}
+        </div>
 
-          <div className="partnerDiv"></div>
-
+        <div className="part-btn-wrap">
           <a href="">
             <button className="part-btn">
               View All Partners →

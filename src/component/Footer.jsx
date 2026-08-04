@@ -103,7 +103,7 @@ function Footer() {
         <div className="divider"></div>
 
         {/* Contact */}
-        <div className="footer-col">
+        <div className="footer-col footer-col-contact">
           <h4>Contact Us</h4>
           <a href="tel:+977 9769910660" className="contact-item">
           <p>

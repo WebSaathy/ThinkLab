@@ -272,9 +272,9 @@ export default function Navbar() {
         <NavLink to="/gallery">Gallery</NavLink>
         <NavLink to="/stores">Store</NavLink>
 
-        <button className="contact-btn mobile-btn">
+        <NavLink to="/contactus" className="contact-btn mobile-btn">
           Contact
-        </button>
+        </NavLink>
       </nav>
 
       <div className="nav-actions">

@@ -253,6 +253,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import {
   FaArrowRight,
   FaImage,
@@ -265,6 +267,11 @@ import BASE_URL from "../config";
 
 function Galleryfirst() {
   const navigate = useNavigate();
+
+  const { ref: statsRef, inView: statsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   const [categories, setCategories] = useState([]);
   const [galleries, setGalleries] = useState([]);
@@ -311,22 +318,27 @@ function Galleryfirst() {
   const stats = [
     {
       icon: <FaImage />,
-      number: `${galleries.length}+`,
+      end: galleries.length,
+      suffix: "+",
       text: "Photos",
     },
     {
       icon: <FaCalendarAlt />,
-      number: "150+",
+      end: 150,
+      suffix: "+",
       text: "Events Captured",
     },
     {
       icon: <FaSchool />,
-      number: `${categories.length}+`,
+      end: categories.length,
+      suffix: "+",
       text: "Categories",
     },
     {
       icon: <FaSmile />,
-      number: "10,000+",
+      end: 10000,
+      suffix: "+",
+      separator: ",",
       text: "Smiles Shared",
     },
   ];
@@ -433,13 +445,24 @@ function Galleryfirst() {
         )}
 
         {/* STATS */}
-        <div className="statsgallery">
+        <div className="statsgallery" ref={statsRef}>
           {stats.map((item, index) => (
             <div className="statgallery-card" key={index}>
               <div className="icongallery">{item.icon}</div>
 
               <div>
-                <h2>{item.number}</h2>
+                <h2>
+                  {statsInView ? (
+                    <CountUp
+                      end={item.end}
+                      duration={2.5}
+                      separator={item.separator || ""}
+                    />
+                  ) : (
+                    0
+                  )}
+                  {item.suffix}
+                </h2>
                 <p>{item.text}</p>
               </div>
             </div>

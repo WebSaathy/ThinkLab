@@ -331,3 +331,185 @@ color: purple;
   color: gray;
 
 }
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .contact-page {
+    padding: 0 24px;
+  }
+
+  .contact-hero {
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-right img {
+    border-radius: 20px;
+  }
+
+  .hero-features {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 26px;
+  }
+
+  .support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-banner {
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .cta {
+    width: 110px;
+  }
+
+  .with {
+    margin: 0;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 0 18px;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .hero-left h4 {
+    font-size: 15px;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .feature svg {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .map-section {
+    margin-top: 30px;
+    border-radius: 16px;
+  }
+
+  .map-card {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 16px 16px 0 0;
+    border: 1px solid #ececf2;
+    border-bottom: none;
+  }
+
+  .map-section iframe {
+    height: 260px;
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .cta {
+    width: 90px;
+  }
+
+  .cta-banner h2 {
+    font-size: 22px;
+  }
+
+  .with {
+    margin: 14px 0 0;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .support-card {
+    padding: 20px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 26px;
+  }
+
+  .hero-left h4 {
+    font-size: 14px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 12px 14px;
+  }
+
+  .socials span {
+    padding: 14px;
+  }
+
+  .info-item {
+    gap: 12px;
+  }
+}

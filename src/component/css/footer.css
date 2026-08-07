@@ -347,7 +347,7 @@ background:linear-gradient(90deg,#4E1D7C,#8B3DFF,#FFB300);
 
 .footer-col-contact{
 
-grid-column:1/-1;
+display:none;
 }
 
 .footer-col a,

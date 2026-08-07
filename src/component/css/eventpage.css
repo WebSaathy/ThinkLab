@@ -132,13 +132,24 @@
   text-align: center;
   padding: 25px 20px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   border-right: 1px solid #ececec;
 }
 
 .eventspage-stat-card:last-child {
   border-right: none;
+}
+
+.eventspage-stat-card .school-icon {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.eventspage-stat-card .car {
+  min-width: 0;
 }
 
 .eventspage-stat-card svg {
@@ -150,6 +161,8 @@
 .eventspage-stat-card h3 {
   font-size: 32px;
   color: #47268A;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .eventspage-stat-card p {
@@ -517,12 +530,39 @@ a{
   }
 
   .eventspage-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .eventspage-stat-card {
-    border-right: none;
+    border-right: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 15px;
+  }
+
+  .eventspage-stat-card:nth-child(even) {
+    border-right: none;
+  }
+
+  .eventspage-stat-card:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .eventspage-stat-card .school-icon {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .eventspage-stat-card svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .eventspage-stat-card h3 {
+    font-size: 26px;
   }
 
   .eventspage-subscribe-content {
@@ -604,6 +644,32 @@ a{
 }
 
 @media (max-width: 480px) {
+  .eventspage-stat-card {
+    padding: 16px 10px;
+    gap: 8px;
+  }
+
+  .eventspage-stat-card .school-icon {
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  .eventspage-stat-card svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .eventspage-stat-card h3 {
+    font-size: 20px;
+  }
+
+  .eventspage-stat-card p {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
   .eventspage-subscribe {
     padding: 20px 15px;
   }

@@ -16,7 +16,7 @@ export default function About() {
       </p>
       <a href="/aboutus"><button className="btn">Read More About Us <span className="arr">→</span> </button></a>
       </div>
-      <img className="brainimage" src={brain} alt="" />
+      <img className="brainimage" src={brain} alt="" loading="lazy" decoding="async" />
     </section>
   );
 }

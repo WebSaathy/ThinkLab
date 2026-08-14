@@ -33,37 +33,37 @@ function RoboticsProjects() {
 
         <div className="projects-grid" ref={projectRef}>
           <div className="project-card">
-            <img src="/project1.jpg" alt="" />
+            <img src="/project1.jpg" alt="" loading="lazy" decoding="async" />
             <h4>Line Following Robot</h4>
             <p>A simple robot that follows a line.</p>
           </div>
 
           <div className="project-card">
-            <img src="/project2.jpg" alt="" />
+            <img src="/project2.jpg" alt="" loading="lazy" decoding="async" />
             <h4>Obstacle Avoiding Robot</h4>
             <p>Detects and avoids obstacles.</p>
           </div>
 
           <div className="project-card">
-            <img src="/project3.jpg" alt="" />
+            <img src="/project3.jpg" alt="" loading="lazy" decoding="async" />
             <h4>Bluetooth Controlled Robot</h4>
             <p>Controlled using smartphone.</p>
           </div>
 
           <div className="project-card">
-            <img src="/project4.jpg" alt="" />
+            <img src="/project4.jpg" alt="" loading="lazy" decoding="async" />
             <h4>Smart Car Robot</h4>
             <p>Autonomous navigation project.</p>
           </div>
 
           <div className="project-card">
-            <img src="/project5.jpg" alt="" />
+            <img src="/project5.jpg" alt="" loading="lazy" decoding="async" />
             <h4>Arduino Robot</h4>
             <p>Built using Arduino Uno.</p>
           </div>
 
           <div className="project-card">
-            <img src="/project5.jpg" alt="" />
+            <img src="/project5.jpg" alt="" loading="lazy" decoding="async" />
             <h4>Arduino Robot</h4>
             <p>Built using Arduino Uno.</p>
           </div>

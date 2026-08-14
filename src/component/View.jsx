@@ -49,7 +49,7 @@
 //               <img
 //                 src={robotCar}
 //                 alt="robot"
-//               />
+// loading="lazy" decoding="async" />
 //             </div>
 //           </section>
 
@@ -79,7 +79,7 @@
 //               <img
 //                 src={robotCar}
 //                 alt=""
-//               />
+// loading="lazy" decoding="async" />
 //             </div>
 //           </section>
 
@@ -90,7 +90,7 @@
 //             <div className="benefits-grid">
 //               <div className="benefit-card">
 //                 <div className="whyim">
-//                   <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFX9pn2cEGYKg/company-logo_200_200/B4DZsIZ909LYAI-/0/1765372583826/blu_blu_studios_logo?e=2147483647&v=beta&t=3O3eka5276iDkn7smXFhWg7hYVWrjUXXbrkblP6EZ5A" alt="" />
+//                   <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFX9pn2cEGYKg/company-logo_200_200/B4DZsIZ909LYAI-/0/1765372583826/blu_blu_studios_logo?e=2147483647&v=beta&t=3O3eka5276iDkn7smXFhWg7hYVWrjUXXbrkblP6EZ5A" alt="" loading="lazy" decoding="async" />
 //                 </div>
 //                 <div className="whycon">
 //                   <h4>Problem Solving</h4>
@@ -100,7 +100,7 @@
 
 //               <div className="benefit-card">
 //                 <div className="whyim">
-//                   <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjJExt0pUyaKfeIZ8Hbm01DzMmoxrZcEnS9Y5g3bhAU95xwHHv" alt="" />
+//                   <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjJExt0pUyaKfeIZ8Hbm01DzMmoxrZcEnS9Y5g3bhAU95xwHHv" alt="" loading="lazy" decoding="async" />
 //                 </div>
 //                 <div className="whycon">
 //                   <h4>Creativity </h4>
@@ -110,7 +110,7 @@
 
 //               <div className="benefit-card">
 //                 <div className="whyim">
-//                   <img src="https://play-lh.googleusercontent.com/IlszrhZnbv-ku2M4NvspWC4HcxzheRez9I5rATCiNOOukajfloIfIIrnQbZdFroLr3k" alt="" />
+//                   <img src="https://play-lh.googleusercontent.com/IlszrhZnbv-ku2M4NvspWC4HcxzheRez9I5rATCiNOOukajfloIfIIrnQbZdFroLr3k" alt="" loading="lazy" decoding="async" />
 //                 </div>
 //                 <div className="whycon">
 //                   <h4>Coding Skills</h4>
@@ -120,7 +120,7 @@
 
 //               <div className="benefit-card">
 //                 <div className="whyim">
-//                   <img src="https://www.shutterstock.com/image-illustration/flat-green-briefcase-icon-circle-260nw-362660282.jpg" alt="" />
+//                   <img src="https://www.shutterstock.com/image-illustration/flat-green-briefcase-icon-circle-260nw-362660282.jpg" alt="" loading="lazy" decoding="async" />
 //                 </div>
 //                 <div className="whycon">
 //                   <h4>Future Careers</h4>
@@ -231,8 +231,7 @@ const View = () => {
             <div className="hero-image">
               <img
                 src={detail.hero_image || detail.program_image}
-                alt={detail.hero_title || detail.program_title}
-              />
+                alt={detail.hero_title || detail.program_title} loading="lazy" decoding="async" />
             </div>
           </section>
 
@@ -253,9 +252,7 @@ const View = () => {
 
               <img
                 src={detail.What_Is_Image || detail.hero_image || detail.program_image}
-                alt={detail.What_Is}
-               
-              />
+                alt={detail.What_Is} loading="lazy" decoding="async" />
             </div>
           </section>
 
@@ -266,7 +263,7 @@ const View = () => {
               {(detail.why_should_std_learn_cards || []).map((card) => (
                 <div className="benefit-card" key={card.id}>
                   <div className="whyim">
-                    <img src={card.img} alt={card.title} />
+                    <img src={card.img} alt={card.title} loading="lazy" decoding="async" />
                   </div>
                   <div className="whycon">
                     <h4>{card.title}</h4>

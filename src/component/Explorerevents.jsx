@@ -88,8 +88,7 @@ function Explorerevents() {
               <img
                 src={event.image}
                 alt={event.title}
-                className="exploreevents-image"
-              />
+                className="exploreevents-image" loading="lazy" decoding="async" />
             </div>
 
             {/* CONTENT */}

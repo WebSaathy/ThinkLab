@@ -78,7 +78,7 @@ export default function Events() {
             <div className="cardcon" key={index}>
 
               <div className="card-img">
-                <img src={item.image} alt="" />
+                <img src={item.image} alt="" loading="lazy" decoding="async" />
 
                 <span className="badge">
                   {item.date}
@@ -109,7 +109,7 @@ export default function Events() {
 
         <div className="title">
           <h2>Recent <span>Posts</span> </h2>
-          <a href="/ViewProgram">View All Posts →</a>
+          <a href="/blog">View All Posts →</a>
         </div>
 
         <div className="posts">
@@ -117,7 +117,7 @@ export default function Events() {
           {posts.map((post, index) => (
             <div className="post" key={index}>
 
-              <img src={post.image} alt="" />
+              <img src={post.image} alt="" loading="lazy" decoding="async" />
 
               <div className="post-text">
                 <h4>{post.title}</h4>

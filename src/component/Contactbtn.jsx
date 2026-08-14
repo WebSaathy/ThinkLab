@@ -72,7 +72,7 @@
 //           </div>
 
 //           <div className="hero-right">
-//             <img src={hero} alt="" />
+//             <img src={hero} alt="" loading="lazy" decoding="async" />
 //           </div>
 
 //         </section>
@@ -227,7 +227,7 @@
 
 //         <section className="cta-banner">
 //           <div className="cta">
-//           <img src={cta} alt="" />
+//           <img src={cta} alt="" loading="lazy" decoding="async" />
 //           </div>
 //           <div>
 //             <h2>Interested in Partnership or Collaboration?</h2>
@@ -250,7 +250,7 @@
 
 //           <div className="support-card">
 //             <div className="imagecon">
-//             <img src={temple} alt="" />
+//             <img src={temple} alt="" loading="lazy" decoding="async" />
 //          <h4 style={{ color: "purple" }}>For Schools</h4>
 
 //             </div>
@@ -262,7 +262,7 @@
 
 //           <div className="support-card">
 //              <div className="imagecon">
-//             <img src={temple} alt="" />
+//             <img src={temple} alt="" loading="lazy" decoding="async" />
 
 //             <h4  style={{ color: "orange" }}>For Parents</h4>
 //             </div>
@@ -275,7 +275,7 @@
 // </div>
 //           <div className="support-card">
 //              <div className="imagecon">
-//             <img src={temple} alt="" />
+//             <img src={temple} alt="" loading="lazy" decoding="async" />
 
 //             <h4  style={{ color: "green" }}>For Corporate</h4>
 //             </div>
@@ -289,7 +289,7 @@
 
 //           <div className="support-card">
 //              <div className="imagecon">
-//             <img src={temple} alt="" />
+//             <img src={temple} alt="" loading="lazy" decoding="async" />
 
 //             <h4  style={{ color: "blue" }}>For Store Inquiries</h4>
 //             </div>
@@ -302,7 +302,7 @@
 
 //           <div className="support-card">
 //              <div className="imagecon">
-//             <img src={temple} alt="" />
+//             <img src={temple} alt="" loading="lazy" decoding="async" />
 
 //             <h4  style={{ color: "purple" }}>For Media</h4>
 //             </div>
@@ -444,7 +444,7 @@ function Contactbtn() {
           </div>
 
           <div className="hero-right">
-            <img src={hero} alt="" />
+            <img src={hero} alt="" loading="lazy" decoding="async" />
           </div>
         </section>
 

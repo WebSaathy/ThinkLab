@@ -20,7 +20,7 @@
 // </div>
   
 //         <div className="storehero-img">
-//           <img src={cover} alt="students robotics" />
+//           <img src={cover} alt="students robotics" loading="lazy" decoding="async" />
 //         </div>
 //       </section>
 //   </>
@@ -68,8 +68,7 @@ function Storesec({ heroProduct }) {
       <div className="storehero-img">
         <img
           src={cover}
-          alt={heroProduct?.name || "store hero"}
-        />
+          alt={heroProduct?.name || "store hero"} loading="lazy" decoding="async" />
       </div>
     </section>
   );

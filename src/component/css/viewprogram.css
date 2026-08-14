@@ -364,6 +364,17 @@
   line-height: 1.5;
 }
 
+/* STATUS */
+
+.events-status {
+  color: #777;
+  padding: 20px 0;
+}
+
+.events-status.error {
+  color: #c0392b;
+}
+
 /* PAGINATION */
 
 .pagination {
@@ -382,7 +393,7 @@
   cursor: pointer;
 }
 
-.pagination button:first-child {
+.pagination button.active {
   background: #5a20d8;
   color: white;
   border-color: #5a20d8;

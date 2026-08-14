@@ -94,7 +94,7 @@
 //         <div className="team-container" ref={scrollRef}>
 //           {members.map((member, index) => (
 //             <div className="team-card" key={index}>
-//               <img src={member.image} alt={member.name} />
+//               <img src={member.image} alt={member.name} loading="lazy" decoding="async" />
 
 //               <h3>{member.name}</h3>
 //               <p>{member.role}</p>
@@ -194,7 +194,7 @@ function Team() {
         <div className="team-container" ref={scrollRef}>
           {members.map((member) => (
             <div className="team-card" key={member.id}>
-              <img src={member.photo} alt={member.name} onClick={()=>{console.log(member.photo)}} />
+              <img src={member.photo} alt={member.name} onClick={()=>{console.log(member.photo)}} loading="lazy" decoding="async" />
               <h3>{member.name}</h3>
               <p>{member.position}</p>
               <h6>{member.email}</h6>

@@ -56,7 +56,7 @@ export default function Partners() {
                     <p>{active.text}</p>
                     <div className="wholecontent">
                         <div className="profile">
-                            <img src={active.img} alt="" />
+                            <img src={active.img} alt="" loading="lazy" decoding="async" />
                             <div>
                                 <h4>{active.name}</h4>
                                 <span>{active.role}</span>

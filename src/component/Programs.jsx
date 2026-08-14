@@ -64,7 +64,7 @@ export default function Programs() {
               {p.title}
             </h3>
 
-            <img src={p.img} alt={p.title} />
+            <img src={p.img} alt={p.title} loading="lazy" decoding="async" />
 
             <div className="program-content">
               <p>{p.desc}</p>

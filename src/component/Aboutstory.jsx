@@ -6,8 +6,7 @@ function Story() {
       <div className="story-image">
         <img
           src={story}
-          alt=""
-        />
+          alt="" loading="lazy" decoding="async" />
       </div>
 
       <div className="story-content">

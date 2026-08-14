@@ -218,7 +218,7 @@
 //             {featuredProducts.map((item, index) => (
 //               <div className="storespage-product-card" key={index}>
 //                 <div className="storespage-product-image">
-//                   <img src={item.image} alt="" />
+//                   <img src={item.image} alt="" loading="lazy" decoding="async" />
 //                 </div>
 
 //                 <div className="storespage-product-content">
@@ -269,7 +269,7 @@
 //             >
 //               {bestSellerProducts.map((item, index) => (
 //                 <div className="storespage-bestseller-card" key={index}>
-//                   <img src={item.image} alt="" />
+//                   <img src={item.image} alt="" loading="lazy" decoding="async" />
 
 //                   <div className="storespage-bestseller-content">
 //                     <h4>{item.title}</h4>
@@ -502,8 +502,7 @@ function Storespage() {
                       <img
                         src={getImageUrl(item.image)}
                         alt={item.name}
-                        style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }}
-                      />
+                        style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} loading="lazy" decoding="async" />
                     ) : (
                       icons[index % icons.length]
                     )}
@@ -535,7 +534,7 @@ function Storespage() {
             {featuredProducts.map((item, index) => (
               <div className="storespage-product-card" key={item.id || index}>
                 <div className="storespage-product-image">
-                  <img src={getImageUrl(item.image)} alt={item.name} />
+                  <img src={getImageUrl(item.image)} alt={item.name} loading="lazy" decoding="async" />
                 </div>
 
                 <div className="storespage-product-content">
@@ -594,7 +593,7 @@ function Storespage() {
             <div className="storespage-bestseller-grid scroll-x" ref={bestSellerRef}>
               {bestSellerProducts.map((item, index) => (
                 <div className="storespage-bestseller-card" key={item.id || index}>
-                  <img src={getImageUrl(item.image)} alt={item.name} />
+                  <img src={getImageUrl(item.image)} alt={item.name} loading="lazy" decoding="async" />
 
                   <div className="storespage-bestseller-content">
                     <h4>{item.name}</h4>

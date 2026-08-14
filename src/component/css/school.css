@@ -121,11 +121,14 @@
 .school-card {
   background: #fff;
   border-radius: 18px;
-  padding: 28px 18px;
+  padding: 28px 20px;
   text-align: center;
   border: 1px solid #ececf2;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .school-card:hover {
@@ -143,6 +146,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .logo-wrapper img {
@@ -155,23 +159,44 @@
   font-size: 16px;
   font-weight: 700;
   color: #111827;
-  line-height: 1.5;
-  margin-bottom: 12px;
-  min-height: 50px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  min-height: 44px;
 }
 
-.school-card p {
+.school-info {
+  width: 100%;
+  text-align: left;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.school-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
   font-size: 13px;
   color: #6b7280;
+  line-height: 1.5;
 }
 
 .location-icon {
   color: #7c3aed;
   font-size: 12px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.school-meta {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.school-meta strong {
+  color: #374151;
+  font-weight: 600;
 }
 
 /* ================= PAGINATION ================= */

@@ -27,7 +27,7 @@ function Aboutus() {
 </div>
 </div>
  <div className="Aboutus-img">
-        <img src={cover} alt="students robotics" />
+        <img src={cover} alt="students robotics" loading="lazy" decoding="async" />
       </div>
       
  </section>

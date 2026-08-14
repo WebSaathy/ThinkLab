@@ -48,7 +48,7 @@
 //         <div className="partners-grid">
 //           {partners.map((item, index) => (
 //             <div className="partner-card" key={index}>
-//               <img src={item.logo} alt="partner" />
+//               <img src={item.logo} alt="partner" loading="lazy" decoding="async" />
 //             </div>
 //           ))}
 //           <div className="partnerDiv">
@@ -70,7 +70,7 @@
 //           <p>{active.text}</p>
 
 //           <div className="profile">
-//             <img src={active.img} alt="" />
+//             <img src={active.img} alt="" loading="lazy" decoding="async" />
 //             <div>
 //               <h4>{active.name}</h4>
 //               <span>{active.role}</span>
@@ -168,7 +168,7 @@ export default function Partners() {
         <div className="partners-grid">
           {partners.map((item, index) => (
             <div className="partner-card" key={index}>
-              <img src={item.logo} alt="partner" />
+              <img src={item.logo} alt="partner" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
@@ -196,7 +196,7 @@ export default function Partners() {
           <p>{active.text}</p>
 
           <div className="profile">
-            <img src={active.img} alt={active.name} />
+            <img src={active.img} alt={active.name} loading="lazy" decoding="async" />
             <div>
               <h4>{active.name}</h4>
               <span>{active.role}</span>

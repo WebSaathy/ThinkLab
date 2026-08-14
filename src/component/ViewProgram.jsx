@@ -1,55 +1,94 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../component/css/viewprogram.css";
 import cover from "../assets/images/cover.jpeg";
-
-import cover1 from "../assets/images/aboutus.jpg";
 import Footer from "./Footer";
-// import cover2 from "../assets/cover2.jpg";
-// import cover3 from "../assets/cover3.jpg";
-// import cover4 from "../assets/cover4.jpg";
+import BASE_URL from "../config";
 
-const articles = [
-  {
-    image: cover1,
-    tag: "STEAM Education",
-    title: "Why STEAM Education is Essential for the Future",
-    desc: "Discover how STEAM learning builds critical thinking, creativity and problem-solving skills.",
-    readTime: "4 min read",
-    views: "892 views",
-  },
-  {
-    image: cover,
-    tag: "AI & Future Tech",
-    title: "AI for Kids: Understanding Tomorrow, Today",
-    desc: "Simple ways to introduce artificial intelligence concepts to young learners.",
-    readTime: "6 min read",
-    views: "1.1k views",
-  },
-  {
-    image: cover,
-    tag: "Innovation",
-    title: "Building a Sustainable Future Through Innovation",
-    desc: "How young innovators are solving real-world problems with creativity and technology.",
-    readTime: "5 min read",
-    views: "748 views",
-  },
-  {
-    image: cover,
-    tag: "School Stories",
-    title: "How Schools Are Transforming Learning",
-    desc: "A look at how partner schools are creating impactful learning experiences.",
-    readTime: "4 min read",
-    views: "633 views",
-  },
-];
+const ARTICLES_PER_PAGE = 4;
+
+const resolveImage = (image) => {
+  if (!image) return cover;
+  return image.startsWith("http") ? image : `${BASE_URL}${image}`;
+};
+
+const formatViews = (views) => {
+  const n = Number(views) || 0;
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}k views`;
+  return `${n} views`;
+};
+
 function ViewProgram() {
+  const navigate = useNavigate();
+  const [articles, setArticles] = useState([]);
+  const [topics, setTopics] = useState([]);
+  const [popularArticles, setPopularArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function fetchData() {
+      try {
+        setLoading(true);
+        setError("");
+
+        const [articlesRes, topicsRes, popularRes] = await Promise.all([
+          fetch(`${BASE_URL}/api/events/articles/`, { signal: controller.signal }),
+          fetch(`${BASE_URL}/api/events/topics/`, { signal: controller.signal }),
+          fetch(`${BASE_URL}/api/events/articles/popular/`, { signal: controller.signal }),
+        ]);
+
+        if (!articlesRes.ok) throw new Error("Failed to load articles");
+        if (!topicsRes.ok) throw new Error("Failed to load topics");
+        if (!popularRes.ok) throw new Error("Failed to load popular articles");
+
+        const [articlesData, topicsData, popularData] = await Promise.all([
+          articlesRes.json(),
+          topicsRes.json(),
+          popularRes.json(),
+        ]);
+
+        setArticles(Array.isArray(articlesData) ? articlesData : []);
+        setTopics(Array.isArray(topicsData) ? topicsData : []);
+        setPopularArticles(Array.isArray(popularData) ? popularData : []);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          setError(err.message || "Something went wrong while loading the blog.");
+        }
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+    return () => controller.abort();
+  }, []);
+
+  const featuredArticle = useMemo(
+    () => articles.find((article) => article.is_featured),
+    [articles]
+  );
+
+  const listArticles = useMemo(
+    () => articles.filter((article) => article.id !== featuredArticle?.id),
+    [articles, featuredArticle]
+  );
+
+  const totalPages = Math.max(1, Math.ceil(listArticles.length / ARTICLES_PER_PAGE));
+
+  const pagedArticles = useMemo(() => {
+    const start = (page - 1) * ARTICLES_PER_PAGE;
+    return listArticles.slice(start, start + ARTICLES_PER_PAGE);
+  }, [listArticles, page]);
+
   return (
     <>
       <div className="blog-page">
-
         <section className="hero-section">
           <div className="hero-left">
-
             <h1>
               Nexu <span>ThinkLab Blog</span>
             </h1>
@@ -70,139 +109,106 @@ function ViewProgram() {
           </div>
 
           <div className="hero-right">
-            <img
-              src={cover}
-              alt="Hero"
-            />
+            <img src={cover} alt="Hero" loading="lazy" decoding="async" />
           </div>
         </section>
 
-        {/* Filters */}
-        {/* <section className="filter-section">
-          <input type="text" placeholder="Search articles..." />
-
-          <select>
-            <option>All Categories</option>
-          </select>
-
-          <select>
-            <option>All Topics</option>
-          </select>
-
-          <select>
-            <option>Latest</option>
-          </select>
-        </section> */}
-
         {/* Main Content */}
         <section className="content-section">
-
           <div className="left-content">
+            {!loading && !error && featuredArticle && (
+              <div
+                className="featured-post"
+                onClick={() => navigate(`/blog/${featuredArticle.id}`)}
+                style={{ cursor: "pointer" }}
+              >
+                <img
+                  src={resolveImage(featuredArticle.image)}
+                  alt={featuredArticle.title} loading="lazy" decoding="async" />
 
-            {/* Featured Post */}
-            <div className="featured-post">
-              <img src={cover} alt="" />
+                <div className="featured-content">
+                  <span className="category">{featuredArticle.topic_name}</span>
 
-              <div className="featured-content">
-                <span className="category">Robotics</span>
+                  <h2>{featuredArticle.title}</h2>
 
-                <h2>
-                  Getting Started with Robotics: A Beginner's Guide
-                </h2>
-
-                <p>
-                  Everything you need to know to build your first robot and begin
-                  your robotics journey.
-                </p>
-
-                <div className="meta">
-                  <span>5 min read</span>
-                  <span>1.2k views</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Articles */}
-            <h2 className="section-title">Latest Articles</h2>
-
-            {articles.map((article, index) => (
-              <div className="article-card" key={index}>
-                <img src={article.image} alt={article.title} />
-
-                <div className="article-info">
-                  <span className="article-tag">{article.tag}</span>
-
-                  <h3>{article.title}</h3>
-
-                  <p>{article.desc}</p>
+                  <p>{featuredArticle.description}</p>
 
                   <div className="meta">
-                    <span>{article.readTime}</span>
-                    <span>{article.views}</span>
+                    <span>{featuredArticle.read_time}</span>
+                    <span>{formatViews(featuredArticle.views)}</span>
                   </div>
                 </div>
               </div>
-            ))}
+            )}
 
-            {/* Pagination */}
-            <div className="pagination">
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-            </div>
+            <h2 className="section-title">Latest Articles</h2>
+
+            {loading && <p className="events-status">Loading articles...</p>}
+
+            {!loading && error && <p className="events-status error">{error}</p>}
+
+            {!loading && !error && articles.length === 0 && (
+              <p className="events-status">No articles published yet.</p>
+            )}
+
+            {!loading &&
+              !error &&
+              pagedArticles.map((article) => (
+                <div
+                  className="article-card"
+                  key={article.id}
+                  onClick={() => navigate(`/blog/${article.id}`)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img src={resolveImage(article.image)} alt={article.title} loading="lazy" decoding="async" />
+
+                  <div className="article-info">
+                    <span className="article-tag">{article.topic_name}</span>
+
+                    <h3>{article.title}</h3>
+
+                    <p>{article.description}</p>
+
+                    <div className="meta">
+                      <span>{article.read_time}</span>
+                      <span>{formatViews(article.views)}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+            {!loading && !error && totalPages > 1 && (
+              <div className="pagination">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                  <button
+                    key={p}
+                    className={p === page ? "active" : ""}
+                    onClick={() => setPage(p)}
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Sidebar */}
           <div className="sidebar">
-
             <div className="sidebar-card">
               <h3>Popular Topics</h3>
 
-              <div className="topic-item">
-                <img src={cover} alt="Robotics" />
+              {!loading && topics.length === 0 && <p>No topics yet.</p>}
 
-                <div className="topic-content">
-                  <h4>Robotics</h4>
-                  <p>24 Articles</p>
+              {topics.map((topic) => (
+                <div className="topic-item" key={topic.id}>
+                  <img src={resolveImage(topic.image)} alt={topic.name} loading="lazy" decoding="async" />
+
+                  <div className="topic-content">
+                    <h4>{topic.name}</h4>
+                    <p>{topic.article_count} Articles</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="topic-item">
-                <img src={cover} alt="AI" />
-
-                <div className="topic-content">
-                  <h4>AI & Future Tech</h4>
-                  <p>18 Articles</p>
-                </div>
-              </div>
-
-              <div className="topic-item">
-                <img src={cover} alt="STEAM" />
-
-                <div className="topic-content">
-                  <h4>STEAM Education</h4>
-                  <p>32 Articles</p>
-                </div>
-              </div>
-
-              <div className="topic-item">
-                <img src={cover} alt="Digital Skills" />
-
-                <div className="topic-content">
-                  <h4>Digital Skills</h4>
-                  <p>16 Articles</p>
-                </div>
-              </div>
-
-              <div className="topic-item">
-                <img src={cover} alt="Innovation" />
-
-                <div className="topic-content">
-                  <h4>Innovation</h4>
-                  <p>21 Articles</p>
-                </div>
-              </div>
+              ))}
 
               <a href="/" className="view-topics">
                 View All Topics →
@@ -217,49 +223,32 @@ function ViewProgram() {
                 inbox.
               </p>
 
-              <input
-                type="email"
-                placeholder="Enter your email"
-              />
+              <input type="email" placeholder="Enter your email" />
 
               <button>Subscribe</button>
             </div>
 
-            <div className="sidebar-card">
-              <h3>Popular Articles</h3>
+            {popularArticles.length > 0 && (
+              <div className="sidebar-card">
+                <h3>Popular Articles</h3>
 
-              <div className="mini-article">
-                <img src={cover} alt="" />
-                <span>Top 5 Robotics Kits for Young Innovators</span>
+                {popularArticles.map((article) => (
+                  <div
+                    className="mini-article"
+                    key={article.id}
+                    onClick={() => navigate(`/blog/${article.id}`)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <img src={resolveImage(article.image)} alt={article.title} loading="lazy" decoding="async" />
+                    <span>{article.title}</span>
+                  </div>
+                ))}
               </div>
-
-              <div className="mini-article">
-                <img src={cover} alt="" />
-                <span>Coding for Kids: Where to Start?</span>
-              </div>
-              <div className="mini-article">
-                <img src={cover} alt="" />
-                <span>Coding for Kids: Where to Start?</span>
-              </div>
-              <div className="mini-article">
-                <img src={cover} alt="" />
-                <span>Coding for Kids: Where to Start?</span>
-              </div>
-              <div className="mini-article">
-                <img src={cover} alt="" />
-                <span>Coding for Kids: Where to Start?</span>
-              </div>
-              <div className="mini-article">
-                <img src={cover} alt="" />
-                <span>Coding for Kids: Where to Start?</span>
-              </div>
-            </div>
-
+            )}
           </div>
         </section>
-
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 }

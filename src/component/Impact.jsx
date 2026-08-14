@@ -29,7 +29,7 @@ export default function Impact() {
         {impactData.map((item, index) => (
           <div className="cards" key={index}>
             <div className="card-icon">
-              <img src={item.image} alt={item.title} />
+              <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
             </div>
 
             <div className="text">

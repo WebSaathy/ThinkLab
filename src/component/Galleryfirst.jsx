@@ -158,19 +158,19 @@
 //             src="https://images.unsplash.com/photo-1588072432904-843af37f03ed?q=80&w=1200"
 //             alt=""
 //             className="img1"
-//           />
+// loading="lazy" decoding="async" />
 
 //           <img
 //             src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
 //             alt=""
 //             className="img2"
-//           />
+// loading="lazy" decoding="async" />
 
 //           <img
 //             src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200"
 //             alt=""
 //             className="img3"
-//           />
+// loading="lazy" decoding="async" />
 //         </div>
 //       </div>
 
@@ -180,7 +180,7 @@
 //       key={index}
 //       className={index === 0 ? "active" : ""}
 //     >
-//       <img src={item.image} alt='' />
+//       <img src={item.image} alt='' loading="lazy" decoding="async" />
 //       <span>{item.name}</span>
 //     </button>
 //   ))}
@@ -189,7 +189,7 @@
 //       <div className="programgallery-grid">
 //         {cards.map((card, index) => (
 //           <div className="programgallery-card" key={index}>
-//             <img src={card.image} alt="" />
+//             <img src={card.image} alt="" loading="lazy" decoding="async" />
 
 //             <div className="overlaygallery">
 //               <div>
@@ -368,8 +368,7 @@ function Galleryfirst() {
                 "https://images.unsplash.com/photo-1588072432904-843af37f03ed?q=80&w=1200"
               }
               alt=""
-              className="img1"
-            />
+              className="img1" loading="lazy" decoding="async" />
 
             <img
               src={
@@ -377,8 +376,7 @@ function Galleryfirst() {
                 "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200"
               }
               alt=""
-              className="img2"
-            />
+              className="img2" loading="lazy" decoding="async" />
 
             <img
               src={
@@ -386,8 +384,7 @@ function Galleryfirst() {
                 "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200"
               }
               alt=""
-              className="img3"
-            />
+              className="img3" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -406,7 +403,7 @@ function Galleryfirst() {
               className={String(selectedCategory) === String(item.id) ? "active" : ""}
               onClick={() => setSelectedCategory(item.id)}
             >
-              <img src={getImageUrl(item.image)} alt={item.name} />
+              <img src={getImageUrl(item.image)} alt={item.name} loading="lazy" decoding="async" />
               <span>{item.name}</span>
             </button>
           ))}
@@ -426,8 +423,7 @@ function Galleryfirst() {
               >
                 <img
                   src={getImageUrl(card.image)}
-                  alt={card.title}
-                />
+                  alt={card.title} loading="lazy" decoding="async" />
 
                 <div className="overlaygallery">
                   <div>

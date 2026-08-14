@@ -25,9 +25,7 @@ function Footer() {
           <a href="/">
             <img
               src={logo}
-              alt="Nexu ThinkLab Logo"
-            
-            />
+              alt="Nexu ThinkLab Logo" loading="lazy" decoding="async" />
           </a>
 </div>
           <div className="brand-text">
@@ -67,7 +65,7 @@ function Footer() {
           <h4>Quick Links</h4>
           <a href="/">Home</a>
           <a href="/aboutus">About Us</a>
-          <a href="/ViewProgram">Blog</a>
+          <a href="/blog">Blog</a>
           <a href="/events">Events</a>
           <a href="/schools">Schools</a>
           <a href="/gallery">Gallery</a>
@@ -107,7 +105,7 @@ function Footer() {
           <h4>Contact Us</h4>
           <a href="tel:+977 9769910660" className="contact-item">
           <p>
-            <FaPhone /> +977 9769910660
+            <i class="fa fa-phone" aria-hidden="true"></i> +977 9769910660
           </p>
        </a>
         <a href="mailto:nexuthinklab@gmail.com " className="contact-item">

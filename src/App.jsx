@@ -16,6 +16,7 @@ import Hostanevent from "./component/Hostanevent";
 import View from "./component/View";
 import ScrollToTop from "./ScrollToTop";
 import GalleryDetail from "./component/GalleryDetail";
+import ArticleDetail from "./component/ArticleDetail";
 import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
        <Route path="/contactus" element={<Contactbtn />} />
        {/* links */}
 
-       <Route path="/ViewProgram" element={<ViewProgram />}/>
+       <Route path="/blog" element={<ViewProgram />}/>
+       <Route path="/blog/:id" element={<ArticleDetail />}/>
        <Route path="/register" element={<Register />}/>
        <Route path="/explore_events" element={<Explorerevents />}/>
        <Route path="/Host_an_events" element={<Hostanevent />}/>

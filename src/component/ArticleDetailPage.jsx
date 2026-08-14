@@ -47,8 +47,7 @@ function ArticleDetailPage({ data }) {
         <div className="articleDetailSteamImage">
           <img
             src={data.Fourth_Section_Image}
-            alt={data.Fourth_Section_Title}
-          />
+            alt={data.Fourth_Section_Title} loading="lazy" decoding="async" />
         </div>
 
       </div>

@@ -12,7 +12,7 @@
 //       </div>
 
 //       {/* Image */}
-//       <img src={image} alt={title} className="programs-img" />
+//       <img src={image} alt={title} className="programs-img" loading="lazy" decoding="async" />
 
 //       {/* Bottom content */}
 //       <p className="desc">{desc}</p>
@@ -106,7 +106,7 @@
 //       <div className="Notsure">
 //         <div className="whole">
 //       <div className="notimg">
-//         <img className="programs-img" src={not} alt="" />
+//         <img className="programs-img" src={not} alt="" loading="lazy" decoding="async" />
 //       </div>
 //       <div className="notcontent">
 //         <h2>Not sure which program is right for you?</h2>
@@ -151,8 +151,7 @@ function ProgramCard({
       <img
         src={image || not}
         alt={title}
-        className="programs-img"
-      />
+        className="programs-img" loading="lazy" decoding="async" />
 
       <p className="desc">
         {desc || "No description available."}
@@ -249,8 +248,7 @@ function ProgramSection({
             <img
               className="programs-img"
               src={not}
-              alt="Program"
-            />
+              alt="Program" loading="lazy" decoding="async" />
           </div>
 
           <div className="notcontent">

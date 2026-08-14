@@ -43,8 +43,7 @@ function Register() {
           <img
             src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
             alt=""
-            className="register-event-image"
-          />
+            className="register-event-image" loading="lazy" decoding="async" />
         </div>
 
         <div className="register-event-content">

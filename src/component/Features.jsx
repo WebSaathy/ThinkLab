@@ -48,7 +48,7 @@ export default function Features() {
           className="card-page"
           style={{ border: `1px solid ${f.borderColor}` }}
         >
-          <img src={f.img} alt={f.title} />
+          <img src={f.img} alt={f.title} loading="lazy" decoding="async" />
           <h3>{f.title}</h3>
           <p>{f.desc}</p>
         </div>

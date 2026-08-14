@@ -25,7 +25,7 @@ function Status() {
         {statsData.map((item, index) => (
           <div className="stat-box" key={index}>
             <div className="image1">
-              <img src={item.image} alt={item.title} />
+              <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
             </div>
             <div className="contents1">
               <h1>

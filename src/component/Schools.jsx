@@ -179,7 +179,7 @@
 //         {schools.map((school, index) => (
 //           <div className="school-card" key={index}>
 //             <div className="logo-wrapper">
-//               <img src={school.logo} alt={school.name} />
+//               <img src={school.logo} alt={school.name} loading="lazy" decoding="async" />
 //             </div>
 
 //             <h3>{school.name}</h3>
@@ -215,7 +215,7 @@
 //   {/* Bottom CTA */}
 //       <div className="partner-banner">
 //         <div className="banner-left">
-//           <div className="b"><img src={banner} alt="" /></div>
+//           <div className="b"><img src={banner} alt="" loading="lazy" decoding="async" /></div>
 
 //           <div>
 //             <h2>
@@ -272,7 +272,7 @@ function Schools() {
   const [error, setError] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
-  const schoolsPerPage = 8;
+  const schoolsPerPage = 10;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -484,33 +484,38 @@ function Schools() {
                     <div className="logo-wrapper">
                       <img
                         src={school.image || "https://via.placeholder.com/150"}
-                        alt={school.name}
-                      />
+                        alt={school.name} loading="lazy" decoding="async" />
                     </div>
 
                     <h3>{school.name}</h3>
 
-                    <p>
-                      <FaMapMarkerAlt className="location-icon" />
-                      {school.address || school.location || "No address available"}
-                    </p>
+                    <div className="school-info">
+                      <p className="school-location">
+                        <FaMapMarkerAlt className="location-icon" />
+                        <span>
+                          {school.address ||
+                            school.location ||
+                            "No address available"}
+                        </span>
+                      </p>
 
-                    <p>
-                      <strong>Province:</strong>{" "}
-                      {school.province_name ||
-                        school.province?.name ||
-                        "N/A"}
-                    </p>
-                    <p>
-                      <strong>District:</strong>{" "}
-                      {school.district_name ||
-                        school.district?.name ||
-                        "N/A"}
-                    </p>
-                    <p>
-                      <strong>Level:</strong>{" "}
-                      {school.level_name || school.level?.name || "N/A"}
-                    </p>
+                      <p className="school-meta">
+                        <strong>Province:</strong>{" "}
+                        {school.province_name ||
+                          school.province?.name ||
+                          "N/A"}
+                      </p>
+                      <p className="school-meta">
+                        <strong>District:</strong>{" "}
+                        {school.district_name ||
+                          school.district?.name ||
+                          "N/A"}
+                      </p>
+                      <p className="school-meta">
+                        <strong>Level:</strong>{" "}
+                        {school.level_name || school.level?.name || "N/A"}
+                      </p>
+                    </div>
 
                     {school.Link && (
                       <a
@@ -563,7 +568,7 @@ function Schools() {
       <div className="partner-banner">
         <div className="banner-left">
           <div className="b">
-            <img src={banner} alt="Partner Banner" />
+            <img src={banner} alt="Partner Banner" loading="lazy" decoding="async" />
           </div>
 
           <div>

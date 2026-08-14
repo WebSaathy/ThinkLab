@@ -39,7 +39,7 @@ export default function Store() {
 
       {/* LEFT SIDE */}
       <div className="store-left">
-        <div className="store-icon"><img src={store} alt="" /></div>
+        <div className="store-icon"><img src={store} alt="" loading="lazy" decoding="async" /></div>
 
         <div>
           <h2>
@@ -72,7 +72,7 @@ export default function Store() {
 
           {visibleProducts.map((p, i) => (
             <div key={i} className="product-card">
-              <img src={p.img} alt={p.name} />
+              <img src={p.img} alt={p.name} loading="lazy" decoding="async" />
 
               <h4 className="h4">{p.name}</h4>
               <div className="price-row">

@@ -124,17 +124,17 @@
 //               src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=900"
 //               alt=""
 //               className="eventspage-big-img"
-//             />
+// loading="lazy" decoding="async" />
 
 //             <div className="eventspage-small-images">
 //               <img
 //                 src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800"
 //                 alt=""
-//               />
+// loading="lazy" decoding="async" />
 //               <img
 //                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
 //                 alt=""
-//               />
+// loading="lazy" decoding="async" />
 //             </div>
 //           </div>
 //         </section>
@@ -286,7 +286,7 @@
 //                   src={event.image}
 //                   alt={event.title}
 //                   className="eventspage-card-image"
-//                 />
+// loading="lazy" decoding="async" />
 
 //                 <div className="eventspage-card-content">
 //                   <span className="eventspage-card-type">
@@ -351,24 +351,24 @@
 //          <div className="eventspage-gallery-grid" ref={galleryRef}>
 
 //   <div className="gallery-item">
-//     <img src="https://diplomatnepal.com/wp-content/uploads/2026/01/616595781_1210702704575540_7375624176852531227_n-1024x683.jpg" alt="" />
+//     <img src="https://diplomatnepal.com/wp-content/uploads/2026/01/616595781_1210702704575540_7375624176852531227_n-1024x683.jpg" alt="" loading="lazy" decoding="async" />
 //     <h6>Nexu Innovation Challenge 2024</h6>
 //   </div>
 
 //   <div className="gallery-item">
-//     <img src="https://assets.skyfilabs.com/images/blog/top-10-reasons-why-kids-should-learn-robotics.webp " alt="" />
+//     <img src="https://assets.skyfilabs.com/images/blog/top-10-reasons-why-kids-should-learn-robotics.webp " alt="" loading="lazy" decoding="async" />
 //     <h6> Robotics Workshop </h6>
 //   </div>
 //  <div className="gallery-item">
-//     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwZ824o2D3d-fMrZlncJdOL5XBe3DOLDX-Pw&s" alt="" />
+//     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwZ824o2D3d-fMrZlncJdOL5XBe3DOLDX-Pw&s" alt="" loading="lazy" decoding="async" />
 //     <h6>AI Exploration Lab</h6>
 //   </div>
 //   <div className="gallery-item">
-//     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="" />
+//     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="" loading="lazy" decoding="async" />
 //     <h6>STEAM Educators Meet</h6>
 //   </div>
 //    <div className="gallery-item">
-//     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQbYWXypOfXYx74K6eYl6JGOKgEiao3GAjQ&s" alt="" />
+//     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQbYWXypOfXYx74K6eYl6JGOKgEiao3GAjQ&s" alt="" loading="lazy" decoding="async" />
 //     <h6>Young Innovators Fair</h6>
 //   </div>
 
@@ -384,7 +384,7 @@
 //         </section>
 //         {/* Subscribe */}
 //         <section className="eventspage-subscribe">
-//             <img className="eveimg" src={update} alt="" />
+//             <img className="eveimg" src={update} alt="" loading="lazy" decoding="async" />
 //           <div className="groupcontent">
 //           <h3>Stay Updated</h3>
 //           <p>Subscribe to get notified about our upcoming events and opportunities.</p>
@@ -532,18 +532,15 @@ function Eventspage() {
             <img
               src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=900"
               alt=""
-              className="eventspage-big-img"
-            />
+              className="eventspage-big-img" loading="lazy" decoding="async" />
 
             <div className="eventspage-small-images">
               <img
                 src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800"
-                alt=""
-              />
+                alt="" loading="lazy" decoding="async" />
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
-                alt=""
-              />
+                alt="" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -657,8 +654,7 @@ function Eventspage() {
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="eventspage-card-image"
-                  />
+                    className="eventspage-card-image" loading="lazy" decoding="async" />
 
                   <div className="eventspage-card-content">
                     <span className="eventspage-card-type">
@@ -730,40 +726,35 @@ function Eventspage() {
               <div className="gallery-item">
                 <img
                   src="https://diplomatnepal.com/wp-content/uploads/2026/01/616595781_1210702704575540_7375624176852531227_n-1024x683.jpg"
-                  alt=""
-                />
+                  alt="" loading="lazy" decoding="async" />
                 <h6>Nexu Innovation Challenge 2024</h6>
               </div>
 
               <div className="gallery-item">
                 <img
                   src="https://assets.skyfilabs.com/images/blog/top-10-reasons-why-kids-should-learn-robotics.webp"
-                  alt=""
-                />
+                  alt="" loading="lazy" decoding="async" />
                 <h6>Robotics Workshop</h6>
               </div>
 
               <div className="gallery-item">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwZ824o2D3d-fMrZlncJdOL5XBe3DOLDX-Pw&s"
-                  alt=""
-                />
+                  alt="" loading="lazy" decoding="async" />
                 <h6>AI Exploration Lab</h6>
               </div>
 
               <div className="gallery-item">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
-                  alt=""
-                />
+                  alt="" loading="lazy" decoding="async" />
                 <h6>STEAM Educators Meet</h6>
               </div>
 
               <div className="gallery-item">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqQbYWXypOfXYx74K6eYl6JGOKgEiao3GAjQ&s"
-                  alt=""
-                />
+                  alt="" loading="lazy" decoding="async" />
                 <h6>Young Innovators Fair</h6>
               </div>
             </div>
@@ -776,7 +767,7 @@ function Eventspage() {
 
         {/* Subscribe */}
         <section className="eventspage-subscribe">
-          <img className="eveimg" src={update} alt="" />
+          <img className="eveimg" src={update} alt="" loading="lazy" decoding="async" />
           <div className="groupcontent">
             <h3>Stay Updated</h3>
             <p>

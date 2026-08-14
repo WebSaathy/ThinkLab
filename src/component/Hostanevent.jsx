@@ -60,8 +60,7 @@ function Hostanevent() {
           <img
             src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
             alt="Host Event"
-            className="hostanevent-image"
-          />
+            className="hostanevent-image" loading="lazy" decoding="async" />
         </div>
 
         <div className="hostanevent-benefits">

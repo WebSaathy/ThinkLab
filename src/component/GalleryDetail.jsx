@@ -64,14 +64,14 @@ function GalleryDetail() {
       )}
 
       <div className="main-gallery-image">
-        <img src={getImageUrl(gallery.image)} alt={gallery.title} />
+        <img src={getImageUrl(gallery.image)} alt={gallery.title} loading="lazy" decoding="async" />
       </div>
 
       <div className="gallery-images-grid">
         {gallery.images?.length > 0 ? (
           gallery.images.map((img) => (
             <div className="gallery-image-card" key={img.id}>
-              <img src={getImageUrl(img.image)} alt={gallery.title} />
+              <img src={getImageUrl(img.image)} alt={gallery.title} loading="lazy" decoding="async" />
             </div>
           ))
         ) : (

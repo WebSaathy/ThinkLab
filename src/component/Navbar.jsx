@@ -15,7 +15,7 @@
 //   return (
 //     <header className="navbar">
 //       <div className="logo">
-//         <img src={logo} alt="Nexu Logo" />
+//         <img src={logo} alt="Nexu Logo" loading="lazy" decoding="async" />
 //       </div>
 
 //       <nav className={menuOpen ? "nav-links active" : "nav-links"}>
@@ -243,7 +243,7 @@ export default function Navbar() {
     <header className="navbar">
 
       {/* <div className="logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt="" loading="lazy" decoding="async" />
       </div> */}
        <div className="navbar-left">
 
@@ -257,7 +257,7 @@ export default function Navbar() {
         </div>
 
         <div className="logo">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" loading="lazy" decoding="async" />
         </div>
 
     </div>
@@ -372,8 +372,7 @@ export default function Navbar() {
 
                     <img
                       src={item.image}
-                      alt=""
-                    />
+                      alt="" loading="lazy" decoding="async" />
 
                     <div>
 

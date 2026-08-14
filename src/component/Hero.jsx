@@ -22,22 +22,22 @@ export default function Hero() {
 </div>
 <div className="link">
 <a href="">
-<img src={book} alt="" />
+<img src={book} alt="" loading="lazy" decoding="async" />
 Learn
 </a>
 <a href="">
-<img src={bulb}  alt="" />
+<img src={bulb}  alt="" loading="lazy" decoding="async" />
 Create
 </a>
 <a href="">
-<img src={innovate}  alt="" />
+<img src={innovate}  alt="" loading="lazy" decoding="async" />
 Innovate
 </a>
 </div>
       </div>
 
       <div className="hero-img">
-        <img src={cover} alt="students robotics" />
+        <img src={cover} alt="students robotics" loading="lazy" decoding="async" />
       </div>
     </section>
   );

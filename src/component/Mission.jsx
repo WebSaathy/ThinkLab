@@ -8,7 +8,7 @@ function MissionVision() {
     <section className="mission-page">
       <div className="cardmiss">
         <div className="imagemiss">
-        <img src={Mission1} alt="" />
+        <img src={Mission1} alt="" loading="lazy" decoding="async" />
         </div>
         <div className="contentmiss">
         <h2>Our <span> Mission</span></h2>
@@ -19,7 +19,7 @@ function MissionVision() {
       </div>
   <div className="cardmiss">
         <div className="imagemiss">
-        <img src={mission2} alt="" />
+        <img src={mission2} alt="" loading="lazy" decoding="async" />
         </div>
         <div className="contentmiss">
         <h2>Our <span>Vision</span></h2>
@@ -30,7 +30,7 @@ function MissionVision() {
       </div>
   <div className="cardmiss">
         <div className="imagemiss">
-        <img src={mission3} alt="" />
+        <img src={mission3} alt="" loading="lazy" decoding="async" />
         </div>
         <div className="contentmiss">
         <h2>Our <span>Values</span></h2>

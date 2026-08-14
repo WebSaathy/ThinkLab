@@ -85,7 +85,7 @@ function New() {
       <div className="info-grid">
         <div className="info-card">
           <div className="team-box">
-            <div className="team-logo"><img src={logo} alt="" /></div>
+            <div className="team-logo"><img src={logo} alt="" loading="lazy" decoding="async" /></div>
 
             <div>
               <h3>Nexu ThinkLab Team ✓</h3>
@@ -130,7 +130,7 @@ function New() {
         <div className="article-list">
           {articles.map((item, index) => (
             <div className="article-card" key={index}>
-              <img src={item.image} alt="" />
+              <img src={item.image} alt="" loading="lazy" decoding="async" />
 
               <div>
                 <small>{item.category}</small>

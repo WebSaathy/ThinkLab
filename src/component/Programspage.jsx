@@ -60,7 +60,7 @@
 //       </div>
 
 //       <div className="programhero-img">
-//         <img src={cover} alt="students robotics" />
+//         <img src={cover} alt="students robotics" loading="lazy" decoding="async" />
 //       </div>
 //     </section>
 //     <div className="filter-bar">
@@ -69,7 +69,7 @@
 //       key={index}
 //       className={index === 0 ? "active" : ""}
 //     >
-//       <img src={item.image} alt='' />
+//       <img src={item.image} alt='' loading="lazy" decoding="async" />
 //       <span>{item.name}</span>
 //     </button>
 //   ))}
@@ -184,7 +184,7 @@ export default function Programspage() {
         </div>
 
         <div className="programhero-img">
-          <img src={cover} alt="students robotics" />
+          <img src={cover} alt="students robotics" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -195,7 +195,7 @@ export default function Programspage() {
             className={activeCategory === item.name ? "active" : ""}
             onClick={() => setActiveCategory(item.name)}
           >
-            {item.image && <img src={item.image} alt="" />}
+            {item.image && <img src={item.image} alt="" loading="lazy" decoding="async" />}
             <span>{item.name}</span>
           </button>
         ))}

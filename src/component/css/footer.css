@@ -345,9 +345,14 @@ background:linear-gradient(90deg,#4E1D7C,#8B3DFF,#FFB300);
 .footer-col:nth-child(7){ animation-delay:.16s; }
 .footer-col:nth-child(9){ animation-delay:.24s; }
 
-.footer-col-contact{
+.footer-col-store{
 
 display:none;
+}
+
+.footer-col-contact{
+
+grid-column:1/-1;
 }
 
 .footer-col a,

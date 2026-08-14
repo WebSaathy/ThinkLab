@@ -78,7 +78,7 @@ function ViewProgram() {
         </section>
 
         {/* Filters */}
-        <section className="filter-section">
+        {/* <section className="filter-section">
           <input type="text" placeholder="Search articles..." />
 
           <select>
@@ -92,7 +92,7 @@ function ViewProgram() {
           <select>
             <option>Latest</option>
           </select>
-        </section>
+        </section> */}
 
         {/* Main Content */}
         <section className="content-section">

@@ -67,7 +67,7 @@ function Footer() {
           <h4>Quick Links</h4>
           <a href="/">Home</a>
           <a href="/aboutus">About Us</a>
-          <a href="/program">Programs</a>
+          <a href="/ViewProgram">Blog</a>
           <a href="/events">Events</a>
           <a href="/schools">Schools</a>
           <a href="/gallery">Gallery</a>
@@ -91,7 +91,7 @@ function Footer() {
         <div className="divider"></div>
 
         {/* Store */}
-        <div className="footer-col">
+        <div className="footer-col footer-col-store">
           <h4>Store</h4>
           <a href="#">All Products</a>
           <a href="#">STEAM Kits</a>

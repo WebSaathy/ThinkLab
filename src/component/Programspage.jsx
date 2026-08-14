@@ -101,7 +101,7 @@ export default function Programspage() {
   const [programs, setPrograms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All Photos");
+  const [activeCategory, setActiveCategory] = useState("All Programs");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -143,11 +143,21 @@ export default function Programspage() {
     };
 
     return [
-      { name: "All Photos", image: book },
-      ...categories.map((cat) => ({
-        name: cat.title || cat.name || cat.category_name || "Category",
-        image: staticImages[cat.title] || book,
-      })),
+      { name: "All Programs", image: null },
+      ...categories.map((cat) => {
+        const displayName = cat.title || cat.name || cat.category_name || "Category";
+        const backendImage = cat.img || cat.image || cat.icon;
+        const resolvedImage = backendImage
+          ? backendImage.startsWith("http")
+            ? backendImage
+            : `${BASE_URL}${backendImage}`
+          : staticImages[displayName] || book;
+
+        return {
+          name: displayName,
+          image: resolvedImage,
+        };
+      }),
     ];
   }, [categories]);
 
@@ -185,7 +195,7 @@ export default function Programspage() {
             className={activeCategory === item.name ? "active" : ""}
             onClick={() => setActiveCategory(item.name)}
           >
-            <img src={item.image} alt="" />
+            {item.image && <img src={item.image} alt="" />}
             <span>{item.name}</span>
           </button>
         ))}

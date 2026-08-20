@@ -257,10 +257,12 @@ import {
 } from "react-icons/fa";
 
 import BASE_URL from "../config";
+import provinceData from "../data/provinces.json";
+
+const PROVINCES = provinceData.provinces;
+
 function Schools() {
   const [schools, setSchools] = useState([]);
-  const [provinces, setProvinces] = useState([]);
-  const [districts, setDistricts] = useState([]);
   const [levels, setLevels] = useState([]);
 
   const [search, setSearch] = useState("");
@@ -274,40 +276,41 @@ function Schools() {
   const [currentPage, setCurrentPage] = useState(1);
   const schoolsPerPage = 10;
 
+  // Districts are static and depend on the currently selected province.
+  const districts = useMemo(() => {
+    if (!selectedProvince) return [];
+    const province = PROVINCES.find(
+      (p) => String(p.id) === String(selectedProvince)
+    );
+    return province ? province.districts : [];
+  }, [selectedProvince]);
+
+  const handleProvinceChange = (e) => {
+    setSelectedProvince(e.target.value);
+    setSelectedDistrict(""); // reset district when province changes
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
         setError("");
 
-        const [schoolsRes, provincesRes, districtsRes, levelsRes] =
-          await Promise.all([
-            fetch(`${BASE_URL}/api/schools/schools/`),
-            fetch(`${BASE_URL}/api/schools/provinces/`),
-            fetch(`${BASE_URL}/api/schools/districts/`),
-            fetch(`${BASE_URL}/api/schools/levels/`),
-          ]);
+        const [schoolsRes, levelsRes] = await Promise.all([
+          fetch(`${BASE_URL}/api/schools/schools/`),
+          fetch(`${BASE_URL}/api/schools/levels/`),
+        ]);
 
-        if (
-          !schoolsRes.ok ||
-          !provincesRes.ok ||
-          !districtsRes.ok ||
-          !levelsRes.ok
-        ) {
+        if (!schoolsRes.ok || !levelsRes.ok) {
           throw new Error("Failed to fetch data from API");
         }
 
-        const [schoolsData, provincesData, districtsData, levelsData] =
-          await Promise.all([
-            schoolsRes.json(),
-            provincesRes.json(),
-            districtsRes.json(),
-            levelsRes.json(),
-          ]);
+        const [schoolsData, levelsData] = await Promise.all([
+          schoolsRes.json(),
+          levelsRes.json(),
+        ]);
 
         setSchools(Array.isArray(schoolsData) ? schoolsData : []);
-        setProvinces(Array.isArray(provincesData) ? provincesData : []);
-        setDistricts(Array.isArray(districtsData) ? districtsData : []);
         setLevels(Array.isArray(levelsData) ? levelsData : []);
       } catch (err) {
         setError(err.message || "Something went wrong");
@@ -353,21 +356,15 @@ function Schools() {
         levelName.includes(searchValue);
 
       const matchesProvince = selectedProvince
-        ? String(
-            school.province_id ??
-              school.province?.id ??
-              school.province ??
-              ""
-          ) === selectedProvince
+        ? provinceName ===
+          (
+            PROVINCES.find((p) => String(p.id) === String(selectedProvince))
+              ?.name || ""
+          ).toLowerCase()
         : true;
 
       const matchesDistrict = selectedDistrict
-        ? String(
-            school.district_id ??
-              school.district?.id ??
-              school.district ??
-              ""
-          ) === selectedDistrict
+        ? districtName === selectedDistrict.toLowerCase()
         : true;
 
       const matchesLevel = selectedLevel
@@ -430,12 +427,9 @@ function Schools() {
           </div>
 
           <div className="dropdown">
-            <select
-              value={selectedProvince}
-              onChange={(e) => setSelectedProvince(e.target.value)}
-            >
+            <select value={selectedProvince} onChange={handleProvinceChange}>
               <option value="">All Provinces</option>
-              {provinces.map((province) => (
+              {PROVINCES.map((province) => (
                 <option key={province.id} value={province.id}>
                   {province.name}
                 </option>
@@ -447,11 +441,14 @@ function Schools() {
             <select
               value={selectedDistrict}
               onChange={(e) => setSelectedDistrict(e.target.value)}
+              disabled={!selectedProvince}
             >
-              <option value="">All Districts</option>
+              <option value="">
+                {selectedProvince ? "All Districts" : "Select Province First"}
+              </option>
               {districts.map((district) => (
-                <option key={district.id} value={district.id}>
-                  {district.name}
+                <option key={district} value={district}>
+                  {district}
                 </option>
               ))}
             </select>
